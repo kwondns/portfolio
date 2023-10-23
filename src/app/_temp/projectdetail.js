@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const md = `# 한국힐링문화진흥협회
 
 진행: 완료

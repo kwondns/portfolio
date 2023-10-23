@@ -1,6 +1,6 @@
 import CardProjectContainer from '@/components/atoms/cardProjectContainer';
 import CardProjectInnerContainer from '@/components/atoms/cardProjectInnerContainer';
-import { ProjectPreviewType } from '@/components/project';
+import { ProjectPreviewType } from '@/types/projectType';
 import CardProjectTagContainer from '@/components/molecules/cardProjectTagContainer';
 
 type CardProps = ProjectPreviewType & {
