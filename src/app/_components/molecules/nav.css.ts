@@ -12,8 +12,8 @@ export const navCss = style([
 export const collapseCss = style({
   display: 'inline',
   position: 'absolute',
-  top: '42px',
-  right: '4px',
+  top: '80%',
+  right: '16px',
   animationDuration: '0.2s',
   backgroundColor: themeVars.background,
   animation: 'fadeInDown 0.3s ease',

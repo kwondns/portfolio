@@ -1,13 +1,15 @@
-import { TagType } from '@/types/tagType';
+import { SimpleTagType } from '@/types/tagType';
 
-export type ProjectPreviewType = {
+export type ProjectType = {
   id: string;
   previewImage: string;
   title: string;
-  contents: string;
+  shortenContent: string;
+  content: string;
   date: string;
-  frontTag: TagType[];
-  backTag: TagType[];
+  frontTag: SimpleTagType[];
+  backTag: SimpleTagType[];
   DBTag: string;
-  // progress: 'closed' | 'aborted' | 'opened';
 };
+
+export type ProjectDetailType = Omit<ProjectType, 'shortenContent' | 'previewImage' | 'date' | 'id'>;

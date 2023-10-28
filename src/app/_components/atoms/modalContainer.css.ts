@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css';
+import { globalStyle, style } from '@vanilla-extract/css';
 import { themeVars } from '@/styles/theme.css';
 import { sprinkles } from '@/styles/sprinkles.css';
 
@@ -12,8 +12,8 @@ export const modalContainerCss = style([
     minWidth: '300px',
     maxWidth: '720px',
     animation: 'fadeInUp 0.3s ease',
-    zIndex: '1002',
-    overflow: 'auto',
+    overflowY: 'auto',
+    zIndex: 1001,
   },
   sprinkles({
     width: { mobile: '100%', tablet: '66%' },
@@ -21,6 +21,10 @@ export const modalContainerCss = style([
     marginY: { mobile: 'medium' },
   }),
 ]);
+
+globalStyle(`${modalContainerCss} > *`, {
+  wordBreak: 'break-all',
+});
 
 export const modalCloseButtonCss = style({
   position: 'absolute',

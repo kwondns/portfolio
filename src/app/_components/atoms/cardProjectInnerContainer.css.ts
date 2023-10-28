@@ -16,6 +16,7 @@ export const cardProjectInnerContainerCss = style({
   overflow: 'hidden',
   cursor: 'pointer',
   boxShadow: themeVars.color30,
+  border: `1px solid ${themeVars.color30}`,
   '@media': {
     'screen and (max-width:700px)': {
       flex: 1,
@@ -27,15 +28,13 @@ export const cardProjectInnerContainerCss = style({
 });
 
 export const cardChildCss = style({
+  rowGap: '4px',
+  height: 'auto',
   selectors: {
     [`${cardProjectInnerContainerCss}:hover &`]: {
-      height: '50%',
+      maxHeight: '100%',
       overflowY: 'auto',
-      '@media': {
-        'screen and (max-width:700px)': {
-          height: '100%',
-        },
-      },
+      backgroundColor: '#303030',
     },
     [`${cardProjectInnerContainerCss} &`]: {
       position: 'absolute',
@@ -44,12 +43,12 @@ export const cardChildCss = style({
       right: 0,
       display: 'flex',
       flexDirection: 'column',
-      height: '70px',
-      backgroundColor: '#30303090',
+      maxHeight: '80px',
+      backgroundColor: '#303030c0',
       borderRadius: '0 0 10px 10px',
       paddingLeft: '1rem',
       margin: 0,
-      transition: 'height 0.3s ease-in-out',
+      transition: 'all 0.3s ease-in-out',
     },
   },
 });

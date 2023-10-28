@@ -1,4 +1,4 @@
-import { StackType, TagType } from '@/types/tagType';
+import { TagStackType, TagType } from '@/types/tagType';
 import Tag from '@/components/atoms/tag';
 import {
   articleCss,
@@ -12,7 +12,7 @@ import {
 type TagByCategoryType = { [keys: string]: TagType[] };
 
 type TagListType = {
-  stackName: StackType;
+  stackName: TagStackType;
   tags: TagByCategoryType;
 };
 

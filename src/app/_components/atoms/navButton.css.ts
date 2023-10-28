@@ -1,5 +1,4 @@
 import { keyframes, style, styleVariants } from '@vanilla-extract/css';
-import { themeVars } from '@/styles/theme.css';
 import { vars } from '@/styles/globalTheme.css';
 
 const fadeInUp = keyframes({
@@ -8,20 +7,30 @@ const fadeInUp = keyframes({
 });
 
 export const linkButtonBase = style({
+  position: 'relative',
   borderRadius: '4px',
   padding: '4px 6px',
-  color: themeVars.color,
   textTransform: 'capitalize',
+  transition: 'all 0.2s ease',
+  ':hover': {
+    background: `linear-gradient(45deg,${vars.color.back} 0%, ${vars.color.front} 50%, ${vars.color.etc} 100%)`,
+    backgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    transform: 'translateX(2px) translateY(-2px)',
+  },
 
-  ':after': {
-    maxWidth: '100%',
+  ':before': {
+    position: 'absolute',
+    bottom: '0',
+    right: '0',
+    left: '0',
+    width: '60%',
     height: '2px',
-    display: 'block',
+    margin: '0 auto',
     opacity: 0,
     content: '',
     background: `linear-gradient(45deg,${vars.color.back} 0%, ${vars.color.front} 50%, ${vars.color.etc} 100%)`,
-    marginBottom: '-6px',
-    marginTop: '1px',
+    transition: 'all 0.2s ease',
   },
   '@media': {
     'screen and (max-width:700px)': {
@@ -30,9 +39,10 @@ export const linkButtonBase = style({
   },
 
   selectors: {
-    '&:hover:after': {
+    '&:hover:before': {
       animation: `${fadeInUp} 0.1s ease`,
       animationFillMode: 'forwards',
+      width: '90%',
     },
   },
 });
@@ -41,9 +51,12 @@ export const linkButtonCss = styleVariants({
   active: [
     linkButtonBase,
     {
+      background: `linear-gradient(45deg,${vars.color.back} 0%, ${vars.color.front} 50%, ${vars.color.etc} 100%)`,
+      backgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
       selectors: {
-        '&:after': { opacity: 1 },
-        '&:hover:after': {
+        '&:before': { opacity: 1 },
+        '&:hover:before': {
           animation: 'none',
         },
       },

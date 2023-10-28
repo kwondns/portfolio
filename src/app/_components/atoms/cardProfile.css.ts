@@ -21,9 +21,6 @@ export const cardProfileCss = style({
     '&:nth-of-type(even)': {
       marginLeft: 'auto',
     },
-    '&:last-of-type': {
-      // margin: 'inherit',
-    },
     '&:nth-of-type(1)': {
       animation: 'fadeInRight 0.3s ease',
       animationDelay: '0.2s',

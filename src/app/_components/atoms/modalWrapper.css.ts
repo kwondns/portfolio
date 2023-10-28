@@ -8,5 +8,5 @@ export const modalWrapperCss = style({
   height: '100vh',
   display: 'flex',
   backgroundColor: '#00000050',
-  zIndex: 1001,
+  zIndex: 1002,
 });

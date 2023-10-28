@@ -16,7 +16,7 @@ export const imageCss = style({
       backgroundImage: 'url("/images/main_mobile.png")',
     },
   },
-  zIndex: 1000,
+  // zIndex: 11,
   animation: 'fadeInUp 0.2s ease',
 });
 
@@ -27,5 +27,5 @@ export const containerCss = style({
   width: '100vw',
   height: '100vh',
   backgroundColor: vars.color.dark,
-  zIndex: 10,
+  // zIndex: 10,
 });

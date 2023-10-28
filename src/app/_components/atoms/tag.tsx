@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { StackType, TagType } from '@/types/tagType';
+import { TagStackType, TagType } from '@/types/tagType';
 import { linkCss, tagCss } from '@/components/atoms/tag.css';
 
-type TagProps = TagType & { type: StackType };
+type TagProps = TagType & { type: TagStackType };
 export default function Tag(props: TagProps) {
   const { type, link, value } = props;
   return (
