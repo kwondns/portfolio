@@ -1,18 +1,13 @@
-import { createVar, globalStyle, style } from '@vanilla-extract/css';
+import { globalStyle, style } from '@vanilla-extract/css';
 import { themeVars } from '@/styles/theme.css';
 import { vars } from '@/styles/globalTheme.css';
 
-export const cardImage = createVar();
 export const cardProjectInnerContainerCss = style({
   position: 'relative',
   borderRadius: '10px',
   width: '680px',
   height: '350px',
   margin: '1rem',
-  backgroundImage: cardImage,
-  backgroundSize: 'contain',
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center',
   overflow: 'hidden',
   cursor: 'pointer',
   boxShadow: themeVars.color30,
@@ -27,6 +22,10 @@ export const cardProjectInnerContainerCss = style({
   },
 });
 
+export const cardProjectImageCss = style({
+  width: '100%',
+  height: 'auto',
+});
 export const cardChildCss = style({
   rowGap: '4px',
   height: 'auto',

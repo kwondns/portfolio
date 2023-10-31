@@ -9,6 +9,7 @@ import {
   orangeColorCss,
   secondCss,
   thirdCss,
+  typingCss,
   whiteColorCss,
   yellowColorCss,
 } from '@/styles/app.css';
@@ -18,7 +19,7 @@ export default function Page() {
     <div className={containerCss}>
       <div className={codeContainerCss}>
         <span className={captionCss}>1 usage new *</span>
-        <span className={orangeColorCss}>
+        <span className={`${orangeColorCss} ${typingCss}`}>
           export default function<span className={yellowColorCss}>{` Me() {`}</span>
         </span>
         <span className={`${orangeColorCss} ${firstCss}`}>

@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import { assignInlineVars } from '@vanilla-extract/dynamic';
+import Image from 'next/image';
 import {
   cardChildCss,
   cardProjectInnerContainerCss,
-  cardImage,
+  cardProjectImageCss,
 } from '@/components/atoms/cardProjectInnerContainer.css';
 
 type CardInnerContainerProps = {
@@ -15,10 +15,8 @@ type CardInnerContainerProps = {
 export default function CardProjectInnerContainer(props: CardInnerContainerProps) {
   const { previewImage, children } = props;
   return (
-    <article
-      className={cardProjectInnerContainerCss}
-      style={assignInlineVars({ [cardImage]: `url("${previewImage}")` })}
-    >
+    <article className={cardProjectInnerContainerCss}>
+      <Image className={cardProjectImageCss} src={previewImage} alt={previewImage} width={400} height={300} />
       <div className={cardChildCss}>{children}</div>
     </article>
   );

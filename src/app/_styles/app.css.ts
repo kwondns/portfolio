@@ -1,4 +1,4 @@
-import { globalStyle, style } from '@vanilla-extract/css';
+import { globalStyle, keyframes, style } from '@vanilla-extract/css';
 import { vars } from '@/styles/globalTheme.css';
 
 export const containerCss = style({
@@ -25,6 +25,10 @@ export const captionCss = style({
   fontSize: '1rem !important',
 });
 
+const typing = keyframes({
+  from: { width: '0ch' },
+  to: { width: '28ch' },
+});
 // export const delayCss =
 export const orangeColorCss = style({ color: '#c88570' });
 export const yellowColorCss = style({ color: '#FFC66D' });
@@ -37,6 +41,19 @@ export const secondCss = style({ paddingLeft: '4ch' });
 export const thirdCss = style({ paddingLeft: '6ch' });
 export const fourthCss = style({ paddingLeft: '8ch' });
 
+export const typingCss = style({
+  animation: `${typing} 1.5s steps(28)`,
+  width: '28ch',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
+});
+
+globalStyle(`${codeContainerCss} > :not(${typingCss}, ${captionCss}) `, {
+  opacity: 0,
+  animation: 'fadeInUp 1s ease',
+  animationFillMode: 'forwards',
+  animationDelay: '1.6s',
+});
 globalStyle(`${codeContainerCss} > span`, {
   fontSize: '1.1rem',
   marginLeft: '20px',
