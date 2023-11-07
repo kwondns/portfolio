@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import CardProfile from '@/components/atoms/cardProfile';
 import { introChildCss, introCss, nameCss, pCss } from '@/styles/profile.css';
+import { containerCss } from '@/styles/layout.css';
 
 export default function ProfilePage() {
   return (
-    <>
+    <div className={containerCss} id="profile">
       <h1 className={nameCss}>Kwon HanJun</h1>
       <CardProfile>
         <p className={introCss}>
@@ -44,6 +45,6 @@ export default function ProfilePage() {
           홈페이지를 제작 및 배포까지 해본 경험이 저의 강점이 되어 주었습니다.
         </p>
       </CardProfile>
-    </>
+    </div>
   );
 }

@@ -2,14 +2,12 @@ import { globalStyle, keyframes, style } from '@vanilla-extract/css';
 import { vars } from '@/styles/globalTheme.css';
 
 export const containerCss = style({
-  position: 'fixed',
-  top: '60px',
-  left: 0,
   width: '100vw',
-  height: '100vh',
+  height: 'calc(100vh)',
   backgroundColor: vars.color.dark,
   display: 'flex',
   justifyContent: 'center',
+  paddingTop: '60px',
 });
 
 export const codeContainerCss = style({

@@ -4,7 +4,6 @@ import '@/styles/globalTheme.css';
 import React from 'react';
 import { ThemeContext } from '@/hooks/useTheme';
 import Header from '@/components/organisms/header';
-import { containerCss } from '@/styles/layout.css';
 
 export const metadata: Metadata = {
   title: 'Kwon Hanjun',
@@ -23,10 +22,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       </head>
       <ThemeContext>
         <body>
-          <div className={containerCss}>
-            <Header />
-            <main>{children}</main>
-          </div>
+          <Header />
+          <main>{children}</main>
         </body>
       </ThemeContext>
     </html>

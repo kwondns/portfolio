@@ -36,6 +36,7 @@ next-env.d.ts
 
 # IntelliJ
 .idea
+qodana.yaml
 
 upload
 

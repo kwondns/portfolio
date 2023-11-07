@@ -1,10 +1,9 @@
 import { style } from '@vanilla-extract/css';
 
 export const containerCss = style({
-  maxWidth: '1024px',
+  height: '100vh',
+  paddingTop: '120px',
   display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  margin: 'auto',
   flexDirection: 'column',
+  alignItems: 'center',
 });

@@ -9,8 +9,7 @@ import NavButton from '@/components/atoms/navButton';
 export default function Nav() {
   const menu = ['about', 'profile', 'stack', 'project'] as const;
   const currentSegment = useSelectedLayoutSegment();
-  const isActive = currentSegment ?? 'about';
-
+  const isActive = currentSegment === '(about)' ? 'about' : 'project';
   const [collapse, setCollapse] = useState<boolean>(false);
 
   const onClickCollapse = () => {

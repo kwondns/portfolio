@@ -14,6 +14,7 @@ globalFontFace('Noto Sans KR', {
 });
 globalStyle('html, body', {
   height: '100%',
+  scrollBehavior: 'smooth',
   color: themeVars.color,
   backgroundColor: themeVars.background,
 });
@@ -47,11 +48,10 @@ globalStyle('main', {
   justifyContent: 'center',
   flexDirection: 'column',
   position: 'relative',
+  top: '60px',
   width: '100%',
-  height: '100%',
-  maxWidth: '720px',
+  maxWidth: '800px',
   margin: '0 auto',
-  overflow: 'hidden',
 });
 
 globalStyle('a', {

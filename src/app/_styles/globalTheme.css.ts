@@ -21,8 +21,8 @@ export const vars = createThemeContract({
 
 createGlobalTheme(':root', vars, {
   color: {
-    white: '#ffffff',
-    'white-hover': '#efefef',
+    white: '#eee',
+    'white-hover': '#dfdfdf',
     dark: '#1d1d26',
     'dark-hover': '#404040',
     gray: '#808080',
