@@ -1,7 +1,7 @@
 import { kv } from '@vercel/kv';
-import TagList from '@/components/molecules/tagList';
 import { sectionCss } from '@/styles/stack.css';
 import { StackType } from '@/types/tagType';
+import StackList from '@/components/molecules/stackList';
 
 export default async function StackPage() {
   const frontStack = await kv.hgetall<StackType>('frontStack');
@@ -12,11 +12,13 @@ export default async function StackPage() {
     return (
       <main>
         <section className={sectionCss}>
-          <TagList stackName="front" tags={frontStack} />
-          <TagList stackName="back" tags={backStack} />
+          <StackList stackName="front" tags={frontStack} type="stack" />
         </section>
         <section className={sectionCss}>
-          <TagList stackName="etc" tags={etcStack} />
+          <StackList stackName="back" tags={backStack} type="stack" />
+        </section>
+        <section className={sectionCss}>
+          <StackList stackName="etc" tags={etcStack} type="stack" />
         </section>
       </main>
     );

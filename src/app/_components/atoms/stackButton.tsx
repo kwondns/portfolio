@@ -1,11 +1,15 @@
 import Image from 'next/image';
-import { stackButtonContainerCss, stackButtonSpanCss } from '@/components/atoms/stackButton.css';
+import Link from 'next/link';
+import { stackButtonContainerCss } from '@/components/atoms/stackButton.css';
+import { TagStackType, StackButtonType } from '@/types/tagType';
 
-export default function StackButton() {
+type StackButtonProps = StackButtonType & { type: TagStackType };
+export default function StackButton(props: StackButtonProps) {
+  const { value, img, type, link } = props;
   return (
-    <div className={stackButtonContainerCss.front}>
-      <Image src="/html5.png" alt="html5" width={60} height={60} />
-      <span className={stackButtonSpanCss}>Express.JS</span>
-    </div>
+    <Link className={stackButtonContainerCss[type]} href={link}>
+      <Image src={img} alt={img} width={100} height={100} />
+      {value}
+    </Link>
   );
 }

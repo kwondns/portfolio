@@ -1,5 +1,4 @@
 import { keyframes, style, styleVariants } from '@vanilla-extract/css';
-import { sprinkles } from '@/styles/sprinkles.css';
 import { vars } from '@/styles/globalTheme.css';
 
 const RippleOut = keyframes({
@@ -12,16 +11,14 @@ const RippleOut = keyframes({
 });
 
 export const stackButtonContainerBase = style([
-  sprinkles({
-    padding: { mobile: 'medium', tablet: 'large' },
-  }),
   {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
     margin: '8px',
-    width: '140px',
+    padding: '8px',
+    minWidth: '140px',
     height: '160px',
     borderRadius: '10%',
     position: 'relative',
@@ -32,7 +29,7 @@ export const stackButtonContainerBase = style([
         height: 'calc(100% + 2px)',
         borderRadius: '10%',
         position: 'absolute',
-        animation: `${RippleOut} 1s ease`,
+        animation: `${RippleOut} 0.8s ease`,
       },
     },
   },
@@ -72,10 +69,4 @@ export const stackButtonContainerCss = styleVariants(stackType, (stack) => [
       border: stack.beforeBorder,
     },
   },
-]);
-
-export const stackButtonSpanCss = style([
-  sprinkles({
-    marginTop: { mobile: 'none', tablet: 'small', desktop: 'medium' },
-  }),
 ]);
