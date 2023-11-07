@@ -27,7 +27,7 @@ export const tagCss = styleVariants(stackType, (stack) => [
   },
 ]);
 
-export const linkCss = style({
+export const spanCss = style({
   fontSize: '0.8rem',
   selectors: {
     [`${tagBase}:hover &`]: {

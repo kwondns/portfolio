@@ -6,7 +6,7 @@ const articleBase = style({
   flex: 1,
   border: '1px solid #808080',
   borderRadius: '8px',
-  padding: '1rem',
+  padding: '0.5rem',
   margin: '1rem',
   opacity: 0,
   animationFillMode: 'forwards !important',

@@ -1,5 +1,4 @@
-import { TagStackType, TagType } from '@/types/tagType';
-import Tag from '@/components/atoms/tag';
+import { TagStackType, StackButtonType } from '@/types/tagType';
 import {
   articleCss,
   articlePCss,
@@ -8,15 +7,16 @@ import {
   tagListLiCss,
   tagListUlCss,
 } from '@/components/molecules/tagList.css';
+import StackButton from '@/components/atoms/stackButton';
 
-type TagByCategoryType = { [keys: string]: TagType[] };
+type TagByCategoryType = { [keys: string]: StackButtonType[] };
 
 type TagListType = {
   stackName: TagStackType;
   tags: TagByCategoryType;
 };
 
-export default function TagList(props: TagListType) {
+export default function StackList(props: TagListType) {
   const { stackName, tags } = props;
   const stackDict = { front: 'Front-End', back: 'Back-End', etc: 'ETC', DB: 'DB' };
   return (
@@ -30,7 +30,13 @@ export default function TagList(props: TagListType) {
               {tags[category].map((stack) => {
                 return (
                   <li className={tagListLiCss} key={`${category}_${stack.value}`}>
-                    <Tag key={stack.value} value={stack.value} type={stackName} link={stack.link} />
+                    <StackButton
+                      key={stack.value}
+                      value={stack.value}
+                      type={stackName}
+                      link={stack.link}
+                      img={stack.img}
+                    />
                   </li>
                 );
               })}
