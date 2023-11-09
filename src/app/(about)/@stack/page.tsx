@@ -11,7 +11,7 @@ export default async function StackPage() {
 
   if (frontStack && backStack && etcStack)
     return (
-      <div className={containerCss} id="stack">
+      <div className={containerCss}>
         <section className={sectionCss}>
           <StackList stackName="front" tags={frontStack} />
         </section>
