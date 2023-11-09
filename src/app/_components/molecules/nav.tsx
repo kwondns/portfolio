@@ -12,7 +12,6 @@ export default function Nav() {
   const isActive = currentSegment === '(about)' ? 'about' : 'project';
   const [currentLocation, setCurrentLocation] = useState('');
   const [collapse, setCollapse] = useState<boolean>(false);
-
   const onClickCollapse = () => {
     setCollapse(!collapse);
   };
@@ -78,6 +77,7 @@ export default function Nav() {
               isActive={
                 (isActive === value && value === 'project') || (isActive !== 'project' && currentLocation === value)
               }
+              onClick={onClickCollapse}
             />
           );
         })}
@@ -86,10 +86,12 @@ export default function Nav() {
   };
 
   return isMobile() ? (
-    <button type="button" onClick={onClickCollapse}>
-      <span className="material-symbols-outlined">menu</span>
-      {collapse && <div className={collapseCss}>{NavContent()}</div>}
-    </button>
+    <>
+      <button type="button" onClick={onClickCollapse}>
+        <span className="material-symbols-outlined">menu</span>
+      </button>
+      <div className={collapseCss[collapse ? 'active' : 'deactivate']}>{NavContent()}</div>
+    </>
   ) : (
     NavContent()
   );

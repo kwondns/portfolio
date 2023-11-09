@@ -7,6 +7,7 @@ export const themeVars = createThemeContract({
   theme: null,
   color30: null,
   hover: null,
+  side: null,
 });
 export const lightTheme = createTheme(themeVars, {
   background: vars.color.white,
@@ -14,6 +15,7 @@ export const lightTheme = createTheme(themeVars, {
   theme: vars.color.light,
   color30: '#30303030',
   hover: vars.color['white-hover'],
+  side: '#4B3B58',
 });
 
 export const darkTheme = createTheme(themeVars, {
@@ -22,4 +24,5 @@ export const darkTheme = createTheme(themeVars, {
   theme: vars.color.moon,
   color30: '#ffffff30',
   hover: vars.color['dark-hover'],
+  side: '#4B3B58',
 });
