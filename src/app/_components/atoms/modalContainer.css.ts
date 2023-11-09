@@ -32,3 +32,10 @@ export const modalCloseButtonCss = style({
   right: 0,
   margin: '4px',
 });
+
+export const modalFullButtonCss = style({
+  position: 'absolute',
+  top: '30px',
+  right: '6px',
+  margin: '4px',
+});
