@@ -20,6 +20,7 @@ const responsiveProperties = defineProperties({
     flexDirection: ['row', 'column'],
     justifyContent: ['stretch', 'flex-start', 'center', 'flex-end', 'space-around', 'space-between'],
     alignItems: ['stretch', 'flex-start', 'center', 'flex-end'],
+    gap: space,
     paddingTop: space,
     paddingBottom: space,
     paddingLeft: space,

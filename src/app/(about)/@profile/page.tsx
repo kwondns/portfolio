@@ -5,7 +5,7 @@ import { containerCss } from '@/styles/layout.css';
 
 export default function ProfilePage() {
   return (
-    <div className={containerCss} id="profile">
+    <div className={containerCss}>
       <h1 className={nameCss}>Kwon HanJun</h1>
       <CardProfile>
         <p className={introCss}>

@@ -16,7 +16,7 @@ import {
 
 export default function Page() {
   return (
-    <div className={containerCss} id="about">
+    <div className={containerCss}>
       <div className={codeContainerCss}>
         <span className={captionCss}>1 usage new *</span>
         <span className={`${orangeColorCss} ${typingCss}`}>

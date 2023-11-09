@@ -12,6 +12,7 @@ export const linkButtonBase = style({
   padding: '4px 6px',
   textTransform: 'capitalize',
   transition: 'all 0.2s ease',
+  fontSize: '1.1rem',
   ':hover': {
     background: `linear-gradient(45deg,${vars.color.back} 0%, ${vars.color.front} 50%, ${vars.color.etc} 100%)`,
     backgroundClip: 'text',
@@ -32,17 +33,17 @@ export const linkButtonBase = style({
     background: `linear-gradient(45deg,${vars.color.back} 0%, ${vars.color.front} 50%, ${vars.color.etc} 100%)`,
     transition: 'all 0.2s ease',
   },
-  '@media': {
-    'screen and (max-width:700px)': {
-      fontSize: '0.85rem',
-    },
-  },
 
   selectors: {
     '&:hover:before': {
       animation: `${fadeInUp} 0.1s ease`,
       animationFillMode: 'forwards',
       width: '90%',
+    },
+  },
+  '@media': {
+    'screen and (max-width:1023px)': {
+      color: vars.color.white,
     },
   },
 });

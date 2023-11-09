@@ -8,9 +8,11 @@ type LayoutProps = {
 export default function Layout({ children, profile, stack }: LayoutProps) {
   return (
     <>
-      {children}
-      {profile}
-      {stack}
+      <div id="about">{children}</div>
+      <div id="profile">{profile}</div>
+      <div id="stack" style={{ height: 'fit-content' }}>
+        {stack}
+      </div>
     </>
   );
 }
