@@ -5,6 +5,7 @@ export const cardProfileCss = style({
   marginBottom: '16px',
   border: '1px solid gray',
   borderRadius: '8px',
+  minWidth: '60%',
   maxWidth: '90%',
   width: 'fit-content',
   padding: '0 16px',

@@ -13,6 +13,9 @@ export const introCss = style({
   padding: '0.4rem',
 });
 
+export const rightTextCss = style({
+  justifyContent: 'right',
+});
 export const introChildCss = style({
   verticalAlign: 'sub',
   paddingRight: '8px',

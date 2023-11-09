@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import CardProfile from '@/components/atoms/cardProfile';
-import { introChildCss, introCss, nameCss, pCss } from '@/styles/profile.css';
+import { introChildCss, introCss, nameCss, pCss, rightTextCss } from '@/styles/profile.css';
 import { containerCss } from '@/styles/layout.css';
 
 export default function ProfilePage() {
@@ -22,17 +22,20 @@ export default function ProfilePage() {
           <span className={`${introChildCss} material-symbols-outlined`}>reorder</span>육군 정보보호병 병장 전역
         </p>
         <p className={introCss}>
+          <span className={`${introChildCss} material-symbols-outlined`}>mail</span> kwon96718@gmail.com
+        </p>
+        <p className={introCss}>
           <Link href="https://github.com/kwondns" target="_blink">
             <span className={`${introChildCss} material-symbols-outlined`}>link</span>https://github.com/kwondns
           </Link>
         </p>
       </CardProfile>
       <CardProfile>
-        <p className={introCss}>교내 정보보안동아리 활동 2015-2017</p>
-        <p className={introCss}>육군 CERT 2017-2018</p>
-        <p className={introCss}>한국생산기술연구원 연구원 2020</p>
-        <p className={introCss}>홍익대학교 빅데이터 개발자 청년인재 양성사업 2021</p>
-        <p className={introCss}>(주)SPASS 현장실습 및 인턴 2021</p>
+        <p className={`${introCss} ${rightTextCss}`}>교내 정보보안동아리 활동 2015-2017</p>
+        <p className={`${introCss} ${rightTextCss}`}>육군 CERT 2017-2018</p>
+        <p className={`${introCss} ${rightTextCss}`}>한국생산기술연구원 연구원 2020</p>
+        <p className={`${introCss} ${rightTextCss}`}>홍익대학교 빅데이터 개발자 청년인재 양성사업 2021</p>
+        <p className={`${introCss} ${rightTextCss}`}>(주)SPASS 현장실습 및 인턴 2021</p>
       </CardProfile>
       <CardProfile>
         <p className={pCss}>
