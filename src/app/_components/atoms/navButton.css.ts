@@ -1,5 +1,5 @@
 import { keyframes, style, styleVariants } from '@vanilla-extract/css';
-import { vars } from '@/styles/globalTheme.css';
+import { themeVars } from '@/styles/theme.css';
 
 const fadeInUp = keyframes({
   '0%': { opacity: 0, transform: 'translateY(10px)' },
@@ -14,7 +14,7 @@ export const linkButtonBase = style({
   transition: 'all 0.2s ease',
   fontSize: '1.1rem',
   ':hover': {
-    background: `linear-gradient(45deg,${vars.color.back} 0%, ${vars.color.front} 50%, ${vars.color.etc} 100%)`,
+    background: themeVars.nav,
     backgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     transform: 'translateX(2px) translateY(-2px)',
@@ -30,7 +30,7 @@ export const linkButtonBase = style({
     margin: '0 auto',
     opacity: 0,
     content: '',
-    background: `linear-gradient(45deg,${vars.color.back} 0%, ${vars.color.front} 50%, ${vars.color.etc} 100%)`,
+    background: themeVars.nav,
     transition: 'all 0.2s ease',
   },
 
@@ -43,7 +43,7 @@ export const linkButtonBase = style({
   },
   '@media': {
     'screen and (max-width:1023px)': {
-      color: vars.color.white,
+      color: '#aaa',
     },
   },
 });
@@ -52,7 +52,7 @@ export const linkButtonCss = styleVariants({
   active: [
     linkButtonBase,
     {
-      background: `linear-gradient(45deg,${vars.color.back} 0%, ${vars.color.front} 50%, ${vars.color.etc} 100%)`,
+      background: themeVars.nav,
       backgroundClip: 'text',
       WebkitTextFillColor: 'transparent',
       selectors: {

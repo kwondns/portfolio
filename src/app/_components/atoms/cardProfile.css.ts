@@ -2,7 +2,7 @@ import { style } from '@vanilla-extract/css';
 import { themeVars } from '@/styles/theme.css';
 
 export const cardProfileCss = style({
-  marginBottom: '16px',
+  margin: '16px',
   border: '1px solid gray',
   borderRadius: '8px',
   minWidth: '60%',
@@ -16,9 +16,6 @@ export const cardProfileCss = style({
   },
 
   selectors: {
-    '&:nth-of-type(odd)': {
-      marginRight: 'auto',
-    },
     '&:nth-of-type(even)': {
       marginLeft: 'auto',
     },
@@ -28,8 +25,12 @@ export const cardProfileCss = style({
       marginRight: 'auto',
     },
     '&:nth-of-type(2)': {
+      border: 'none',
       animation: 'fadeInLeft 0.3s ease',
       animationDelay: '0.4s',
+    },
+    '&:nth-of-type(2):hover': {
+      backgroundColor: themeVars.background,
     },
     '&:nth-of-type(3)': {
       animation: 'fadeInUp 0.3s ease',

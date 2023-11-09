@@ -4,8 +4,7 @@ import { sprinkles } from '@/styles/sprinkles.css';
 
 const articleBase = style({
   flex: 1,
-  border: '1px solid #808080',
-  borderRadius: '8px',
+  borderRadius: '10px',
   padding: '0.5rem',
   margin: '1rem',
   opacity: 0,

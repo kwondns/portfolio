@@ -1,9 +1,18 @@
 import Link from 'next/link';
 import CardProfile from '@/components/atoms/cardProfile';
-import { introChildCss, introCss, nameCss, pCss, rightTextCss } from '@/styles/profile.css';
+import { introChildCss, introCss, nameCss, pCss } from '@/styles/profile.css';
 import { containerCss } from '@/styles/layout.css';
+import Stepper from '@/components/molecules/stepper';
 
 export default function ProfilePage() {
+  const stepperText = [
+    '교내 정보보안동아리 활동 2015-2017',
+    '육군 CERT 2017-2018',
+    '한국생산기술연구원 연구원 2020',
+    '홍익대학교 빅데이터 개발자 청년인재 양성사업 2021',
+    '(주)SPASS 현장실습 및 인턴 2021',
+  ];
+
   return (
     <div className={containerCss}>
       <h1 className={nameCss}>Kwon HanJun</h1>
@@ -31,11 +40,7 @@ export default function ProfilePage() {
         </p>
       </CardProfile>
       <CardProfile>
-        <p className={`${introCss} ${rightTextCss}`}>교내 정보보안동아리 활동 2015-2017</p>
-        <p className={`${introCss} ${rightTextCss}`}>육군 CERT 2017-2018</p>
-        <p className={`${introCss} ${rightTextCss}`}>한국생산기술연구원 연구원 2020</p>
-        <p className={`${introCss} ${rightTextCss}`}>홍익대학교 빅데이터 개발자 청년인재 양성사업 2021</p>
-        <p className={`${introCss} ${rightTextCss}`}>(주)SPASS 현장실습 및 인턴 2021</p>
+        <Stepper texts={stepperText} />
       </CardProfile>
       <CardProfile>
         <p className={pCss}>
