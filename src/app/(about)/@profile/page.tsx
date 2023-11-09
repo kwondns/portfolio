@@ -22,6 +22,9 @@ export default function ProfilePage() {
           <span className={`${introChildCss} material-symbols-outlined`}>reorder</span>육군 정보보호병 병장 전역
         </p>
         <p className={introCss}>
+          <span className={`${introChildCss} material-symbols-outlined`}>mail</span> kwon96718@gmail.com
+        </p>
+        <p className={introCss}>
           <Link href="https://github.com/kwondns" target="_blink">
             <span className={`${introChildCss} material-symbols-outlined`}>link</span>https://github.com/kwondns
           </Link>
