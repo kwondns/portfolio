@@ -3,7 +3,7 @@ import { vars } from '@/styles/globalTheme.css';
 
 export const containerCss = style({
   width: '100vw',
-  height: 'calc(100vh)',
+  minHeight: 'calc(100vh)',
   backgroundColor: vars.color.dark,
   display: 'flex',
   justifyContent: 'center',

@@ -19,6 +19,7 @@ export const linkButtonBase = style({
     WebkitTextFillColor: 'transparent',
     transform: 'translateX(2px) translateY(-2px)',
   },
+  color: themeVars.color,
 
   ':before': {
     position: 'absolute',
@@ -39,11 +40,6 @@ export const linkButtonBase = style({
       animation: `${fadeInUp} 0.1s ease`,
       animationFillMode: 'forwards',
       width: '90%',
-    },
-  },
-  '@media': {
-    'screen and (max-width:1023px)': {
-      color: '#aaa',
     },
   },
 });

@@ -17,13 +17,13 @@ export const collapseBase = style({
   right: '0',
   height: '100vh',
   opacity: 0,
-  backgroundColor: themeVars.side,
+  background: themeVars.side,
   transition: 'all 0.5s ease',
   paddingTop: '16px',
+  zIndex: -1,
   '@media': {
     'screen and (max-width:768px)': {
-      top: '-100%',
-      right: '0',
+      right: '-100%',
       width: '100vw',
     },
     'screen and (min-width:769px) and (max-width:1024px)': {
@@ -52,7 +52,7 @@ export const collapseCss = styleVariants({
       opacity: 1,
       '@media': {
         'screen and (max-width:768px)': {
-          transform: 'translateY(calc(100% + 60px))',
+          transform: 'translateX(-100%)',
         },
         'screen and (min-width:769px) and (max-width:1024px)': {
           transform: 'translateX(-200px)',
