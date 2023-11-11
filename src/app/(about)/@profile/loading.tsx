@@ -1,5 +1,10 @@
-import LoadingComponent from '@/components/molecules/loadingComponent';
+import SkeletonContainer from '@/components/atoms/skeletonContainer';
+import WaveSkeleton from '@/components/atoms/waveSkeleton';
 
 export default function Loading() {
-  return <LoadingComponent />;
+  return (
+    <SkeletonContainer>
+      <WaveSkeleton />
+    </SkeletonContainer>
+  );
 }
