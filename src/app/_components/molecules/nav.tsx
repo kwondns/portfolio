@@ -6,6 +6,31 @@ import { collapseCss, navCss } from '@/components/molecules/nav.css';
 import isMobile from '@/hooks/useDevice';
 import NavButton from '@/components/atoms/navButton';
 
+type NavContentProps = {
+  menu: readonly ['about', 'profile', 'stack', 'project'];
+  isActive: 'about' | 'project';
+  currentLocation: string;
+  onClickCollapse: () => void;
+};
+const NavContent = ({ menu, isActive, currentLocation, onClickCollapse }: NavContentProps) => {
+  return (
+    <nav className={navCss}>
+      {menu.map((value) => {
+        return (
+          <NavButton
+            key={value}
+            value={value}
+            isActive={
+              (isActive === value && value === 'project') || (isActive !== 'project' && currentLocation === value)
+            }
+            onClick={onClickCollapse}
+          />
+        );
+      })}
+    </nav>
+  );
+};
+
 export default function Nav() {
   const menu = ['about', 'profile', 'stack', 'project'] as const;
   const currentSegment = useSelectedLayoutSegment();
@@ -66,33 +91,21 @@ export default function Nav() {
     };
   }, [currentSegment]);
 
-  const NavContent = () => {
-    return (
-      <nav className={navCss}>
-        {menu.map((value) => {
-          return (
-            <NavButton
-              key={value}
-              value={value}
-              isActive={
-                (isActive === value && value === 'project') || (isActive !== 'project' && currentLocation === value)
-              }
-              onClick={onClickCollapse}
-            />
-          );
-        })}
-      </nav>
-    );
-  };
-
   return isMobile() ? (
     <>
       <button type="button" onClick={onClickCollapse}>
         <span className="material-symbols-outlined">menu</span>
       </button>
-      <div className={collapseCss[collapse ? 'active' : 'deactivate']}>{NavContent()}</div>
+      <div className={collapseCss[collapse ? 'active' : 'deactivate']}>
+        <NavContent
+          menu={menu}
+          isActive={isActive}
+          currentLocation={currentLocation}
+          onClickCollapse={onClickCollapse}
+        />
+      </div>
     </>
   ) : (
-    NavContent()
+    <NavContent menu={menu} isActive={isActive} currentLocation={currentLocation} onClickCollapse={onClickCollapse} />
   );
 }
