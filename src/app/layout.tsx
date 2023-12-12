@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import '@/styles/globalStyle.css';
 import '@/styles/globalTheme.css';
@@ -24,6 +25,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <body>
           <Header />
           <main>{children}</main>
+          <Analytics />
         </body>
       </ThemeContext>
     </html>
