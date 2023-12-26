@@ -1,4 +1,4 @@
-import { TagStackType, TagType } from '@/types/tagType';
+import { TagStackType, TagType } from '@/types/stackType';
 import { spanCss, tagCss } from '@/components/atoms/tag/tag.css';
 import SpanBase from '@/components/atoms/base/spanBase';
 

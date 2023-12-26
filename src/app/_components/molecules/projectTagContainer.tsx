@@ -1,7 +1,7 @@
 'use client';
 
 import useDevice from '@/hooks/useDevice';
-import { SimpleTagType } from '@/types/tagType';
+import { SimpleTagType } from '@/types/stackType';
 import TagContainer from '@/components/atoms/tagContainer/tagContainer';
 import Tag from '@/components/atoms/tag/tag';
 

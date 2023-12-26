@@ -1,7 +1,7 @@
 import { kv } from '@vercel/kv';
 import { sectionCss } from '@/styles/stack.css';
-import { StackType } from '@/types/tagType';
-import StackList from '@/components/molecules/stackList';
+import { StackType } from '@/types/stackType';
+import Stack from '@/components/organisms/stack';
 import { containerCss } from '@/styles/layout.css';
 import Container from '@/components/atoms/base/container';
 
@@ -14,13 +14,13 @@ export default async function StackPage() {
     return (
       <Container className={containerCss}>
         <section className={sectionCss}>
-          <StackList stackName="front" tags={frontStack} />
+          <Stack stackName="front" tags={frontStack} />
         </section>
         <section className={sectionCss}>
-          <StackList stackName="back" tags={backStack} />
+          <Stack stackName="back" tags={backStack} />
         </section>
         <section className={sectionCss}>
-          <StackList stackName="etc" tags={etcStack} />
+          <Stack stackName="etc" tags={etcStack} />
         </section>
       </Container>
     );

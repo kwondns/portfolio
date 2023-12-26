@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { stackButtonContainerCss } from '@/components/atoms/stackButton/stackButton.css';
-import { TagStackType, StackButtonType } from '@/types/tagType';
+import { TagStackType, StackButtonType } from '@/types/stackType';
 
 type StackButtonProps = StackButtonType & { type: TagStackType };
 export default function StackButton(props: StackButtonProps) {

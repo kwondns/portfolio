@@ -1,4 +1,4 @@
-import { SimpleTagType } from '@/types/tagType';
+import { SimpleTagType } from '@/types/stackType';
 
 export type ProjectType = {
   id: string;
