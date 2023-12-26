@@ -6,7 +6,8 @@ import Container from '@/components/atoms/base/container';
 type StepperProps = {
   texts: string[];
 };
-export default function Stepper({ texts }: StepperProps) {
+export default function Stepper(props: StepperProps) {
+  const { texts } = props;
   return (
     <Container className={stepperCss}>
       {texts.map((text, index) => {
