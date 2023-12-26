@@ -3,6 +3,7 @@ import { sectionCss } from '@/styles/stack.css';
 import { StackType } from '@/types/tagType';
 import StackList from '@/components/molecules/stackList';
 import { containerCss } from '@/styles/layout.css';
+import Container from '@/components/atoms/container';
 
 export default async function StackPage() {
   const frontStack = await kv.hgetall<StackType>('frontStack');
@@ -11,7 +12,7 @@ export default async function StackPage() {
 
   if (frontStack && backStack && etcStack)
     return (
-      <div className={containerCss}>
+      <Container className={containerCss}>
         <section className={sectionCss}>
           <StackList stackName="front" tags={frontStack} />
         </section>
@@ -21,6 +22,6 @@ export default async function StackPage() {
         <section className={sectionCss}>
           <StackList stackName="etc" tags={etcStack} />
         </section>
-      </div>
+      </Container>
     );
 }

@@ -1,22 +1,23 @@
 import StepperCircle from '@/components/atoms/stepperCircle';
 import StepperLine from '@/components/atoms/stepperLine';
 import { stepperCss, stepperLine, stepperTextCss } from '@/components/molecules/stepper.css';
+import Container from '@/components/atoms/container';
 
 type StepperProps = {
   texts: string[];
 };
 export default function Stepper({ texts }: StepperProps) {
   return (
-    <div className={stepperCss}>
+    <Container className={stepperCss}>
       {texts.map((text, index) => {
         return (
-          <div className={stepperLine}>
+          <Container className={stepperLine}>
             <StepperCircle />
             <p className={stepperTextCss}>{text}</p>
             {index !== texts.length - 1 && <StepperLine />}
-          </div>
+          </Container>
         );
       })}
-    </div>
+    </Container>
   );
 }

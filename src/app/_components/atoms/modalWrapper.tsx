@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import React, { useCallback, useEffect } from 'react';
 import { modalWrapperCss } from '@/components/atoms/modalWrapper.css';
+import Container from '@/components/atoms/container';
 
 export default function ModalWrapper({ children }: { children: React.ReactNode }) {
   const route = useRouter();
@@ -25,8 +26,8 @@ export default function ModalWrapper({ children }: { children: React.ReactNode }
   }, [onPressEscape]);
 
   return (
-    <div className={modalWrapperCss} onClick={onClickBackground} role="presentation">
+    <Container className={modalWrapperCss} onClick={onClickBackground} role="presentation">
       {children}
-    </div>
+    </Container>
   );
 }

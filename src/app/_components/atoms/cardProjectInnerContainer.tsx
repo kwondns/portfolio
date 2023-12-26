@@ -7,6 +7,7 @@ import {
   cardProjectInnerContainerCss,
   cardProjectImageCss,
 } from '@/components/atoms/cardProjectInnerContainer.css';
+import Container from '@/components/atoms/container';
 
 type CardInnerContainerProps = {
   previewImage: string;
@@ -17,7 +18,7 @@ export default function CardProjectInnerContainer(props: CardInnerContainerProps
   return (
     <article className={cardProjectInnerContainerCss}>
       <Image className={cardProjectImageCss} src={previewImage} alt={previewImage} width={400} height={300} />
-      <div className={cardChildCss}>{children}</div>
+      <Container className={cardChildCss}>{children}</Container>
     </article>
   );
 }

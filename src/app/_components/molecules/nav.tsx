@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { collapseCss, navCss } from '@/components/molecules/nav.css';
 import isMobile from '@/hooks/useDevice';
 import NavButton from '@/components/atoms/navButton';
+import Container from '@/components/atoms/container';
 
 type NavContentProps = {
   menu: readonly ['about', 'profile', 'stack', 'project'];
@@ -96,14 +97,14 @@ export default function Nav() {
       <button type="button" onClick={onClickCollapse}>
         <span className="material-symbols-outlined">menu</span>
       </button>
-      <div className={collapseCss[collapse ? 'active' : 'deactivate']}>
+      <Container className={collapseCss[collapse ? 'active' : 'deactivate']}>
         <NavContent
           menu={menu}
           isActive={isActive}
           currentLocation={currentLocation}
           onClickCollapse={onClickCollapse}
         />
-      </div>
+      </Container>
     </>
   ) : (
     <NavContent menu={menu} isActive={isActive} currentLocation={currentLocation} onClickCollapse={onClickCollapse} />

@@ -1,6 +1,7 @@
 import { kv } from '@vercel/kv';
 import CardProject from '@/components/organisms/cardProject';
 import { ProjectType } from '@/types/projectType';
+import Container from '@/components/atoms/container';
 
 export default async function ProjectPage() {
   const projectList = await kv.lrange('project', 0, -1);
@@ -25,7 +26,7 @@ export default async function ProjectPage() {
             />
           );
         }
-        return <div>Error Occurred!</div>;
+        return <Container>Error Occurred!</Container>;
       })}
     </>
   );

@@ -3,6 +3,7 @@ import CardProfile from '@/components/atoms/cardProfile';
 import { introChildCss, introCss, nameCss, pCss } from '@/styles/profile.css';
 import { containerCss } from '@/styles/layout.css';
 import Stepper from '@/components/molecules/stepper';
+import Container from '@/components/atoms/container';
 
 export default function ProfilePage() {
   const stepperText = [
@@ -14,7 +15,7 @@ export default function ProfilePage() {
   ];
 
   return (
-    <div className={containerCss}>
+    <Container className={containerCss}>
       <h1 className={nameCss}>Kwon HanJun</h1>
       <CardProfile>
         <p className={introCss}>
@@ -54,6 +55,6 @@ export default function ProfilePage() {
           경험을 토대로 실무에서도 적용할 수 있는 점이 저의 강점이 되어 주었습니다.
         </p>
       </CardProfile>
-    </div>
+    </Container>
   );
 }

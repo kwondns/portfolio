@@ -4,6 +4,7 @@ import React, { MouseEvent, useCallback } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { modalCloseButtonCss, modalContainerCss, modalFullButtonCss } from '@/components/atoms/modalContainer.css';
+import Container from '@/components/atoms/container';
 
 export default function ModalContainer({ children }: { children: React.ReactNode }) {
   const route = useRouter();
@@ -16,7 +17,7 @@ export default function ModalContainer({ children }: { children: React.ReactNode
   }, [route]);
 
   return (
-    <div className={modalContainerCss} onClick={onClickStopPropagation} role="presentation">
+    <Container className={modalContainerCss} onClick={onClickStopPropagation} role="presentation">
       <button className={modalCloseButtonCss} type="button" onClick={onClickClose}>
         <span className="material-symbols-outlined">close</span>
       </button>
@@ -24,6 +25,6 @@ export default function ModalContainer({ children }: { children: React.ReactNode
         <span className="material-symbols-outlined">fullscreen</span>
       </Link>
       {children}
-    </div>
+    </Container>
   );
 }

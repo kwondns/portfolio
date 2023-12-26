@@ -13,11 +13,12 @@ import {
   whiteColorCss,
   yellowColorCss,
 } from '@/styles/app.css';
+import Container from '@/components/atoms/container';
 
 export default function Page() {
   return (
-    <div className={containerCss}>
-      <div className={codeContainerCss}>
+    <Container className={containerCss}>
+      <Container className={codeContainerCss}>
         <span className={captionCss}>1 usage new *</span>
         <span className={`${orangeColorCss} ${typingCss}`}>
           export default function<span className={yellowColorCss}>{` Me() {`}</span>
@@ -48,7 +49,7 @@ export default function Page() {
           )<span className={orangeColorCss}>;</span>
         </span>
         <span className={yellowColorCss}>{`}`}</span>
-      </div>
-    </div>
+      </Container>
+    </Container>
   );
 }
