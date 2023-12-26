@@ -10,6 +10,7 @@ import {
 } from '@/components/atoms/modalContainer/modalContainer.css';
 import Container from '@/components/atoms/base/container';
 import IconBase from '@/components/atoms/base/iconBase';
+import ButtonBase from '@/components/atoms/base/buttonBase';
 
 export default function ModalContainer({ children }: { children: React.ReactNode }) {
   const route = useRouter();
@@ -23,9 +24,9 @@ export default function ModalContainer({ children }: { children: React.ReactNode
 
   return (
     <Container className={modalContainerCss} onClick={onClickStopPropagation} role="presentation">
-      <button className={modalCloseButtonCss} type="button" onClick={onClickClose}>
+      <ButtonBase className={modalCloseButtonCss} onClick={onClickClose}>
         <IconBase>close</IconBase>
-      </button>
+      </ButtonBase>
       <Link className={modalFullButtonCss} href={currentPath} target="_parent">
         <IconBase>fullscreen</IconBase>
       </Link>

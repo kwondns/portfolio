@@ -7,6 +7,7 @@ import isMobile from '@/hooks/useDevice';
 import NavButton from '@/components/atoms/navButton/navButton';
 import Container from '@/components/atoms/base/container';
 import IconBase from '@/components/atoms/base/iconBase';
+import ButtonBase from '@/components/atoms/base/buttonBase';
 
 type NavContentProps = {
   menu: readonly ['about', 'profile', 'stack', 'project'];
@@ -95,9 +96,9 @@ export default function Nav() {
 
   return isMobile() ? (
     <>
-      <button type="button" onClick={onClickCollapse}>
+      <ButtonBase onClick={onClickCollapse}>
         <IconBase>menu</IconBase>
-      </button>
+      </ButtonBase>
       <Container className={collapseCss[collapse ? 'active' : 'deactivate']}>
         <NavContent
           menu={menu}
