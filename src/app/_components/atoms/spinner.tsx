@@ -1,5 +1,6 @@
 import { spinnerCss } from '@/components/atoms/spinner.css';
+import SpanBase from '@/components/atoms/spanBase';
 
 export default function Spinner() {
-  return <span className={spinnerCss} />;
+  return <SpanBase className={spinnerCss} />;
 }

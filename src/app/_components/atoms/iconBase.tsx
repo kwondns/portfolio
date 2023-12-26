@@ -1,4 +1,5 @@
 import React from 'react';
+import SpanBase from '@/components/atoms/spanBase';
 
 type IconBaseProps = {
   // eslint-disable-next-line react/require-default-props
@@ -7,5 +8,5 @@ type IconBaseProps = {
 };
 export default function IconBase(props: IconBaseProps) {
   const { className = '', children } = props;
-  return <span className={`material-symbols-outlined ${className}`}>{children}</span>;
+  return <SpanBase className={`material-symbols-outlined ${className}`}>{children}</SpanBase>;
 }
