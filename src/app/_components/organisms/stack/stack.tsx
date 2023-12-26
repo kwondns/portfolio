@@ -1,6 +1,6 @@
 import { TagStackType, StackButtonType } from '@/types/stackType';
-import { articleCss, articlePCss, articleULCss } from '@/components/organisms/stack.css';
-import StackByCategory from '@/components/molecules/stackByCategory';
+import { articleCss, articlePCss, articleULCss } from '@/components/organisms/stack/stack.css';
+import StackByCategory from '@/components/molecules/stackByCategory/stackByCategory';
 
 type StackByCategoryType = { [keys: string]: StackButtonType[] };
 

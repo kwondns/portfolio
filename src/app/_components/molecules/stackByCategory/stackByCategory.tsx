@@ -1,5 +1,9 @@
 import StackButton from '@/components/atoms/stackButton/stackButton';
-import { tagListCategoryCss, tagListLiCss, tagListUlCss } from '@/components/molecules/stackByCategory.css';
+import {
+  tagListCategoryCss,
+  tagListLiCss,
+  tagListUlCss,
+} from '@/components/molecules/stackByCategory/stackByCategory.css';
 import { StackButtonType, TagStackType } from '@/types/stackType';
 
 type StacksProps = {

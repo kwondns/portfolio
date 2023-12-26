@@ -1,7 +1,7 @@
 import { kv } from '@vercel/kv';
 import { sectionCss } from '@/styles/stack.css';
 import { StackType } from '@/types/stackType';
-import Stack from '@/components/organisms/stack';
+import Stack from '@/components/organisms/stack/stack';
 import { containerCss } from '@/styles/layout.css';
 import Container from '@/components/atoms/base/container';
 

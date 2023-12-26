@@ -1,6 +1,6 @@
 import StepperCircle from '@/components/atoms/stepperCircle/stepperCircle';
 import StepperLine from '@/components/atoms/stepperLine/stepperLine';
-import { stepperCss, stepperLine, stepperTextCss } from '@/components/molecules/stepper.css';
+import { stepperCss, stepperLine, stepperTextCss } from '@/components/molecules/stepper/stepper.css';
 import Container from '@/components/atoms/base/container';
 
 type StepperProps = {

@@ -1,5 +1,5 @@
 import { kv } from '@vercel/kv';
-import ProjectCard from '@/components/organisms/projectCard';
+import ProjectCard from '@/components/organisms/projectCard/projectCard';
 import { ProjectType } from '@/types/projectType';
 import Container from '@/components/atoms/base/container';
 

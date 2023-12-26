@@ -1,6 +1,6 @@
 import { kv } from '@vercel/kv';
-import Modal from '@/components/molecules/modal';
-import ProjectDetail from '@/components/organisms/projectDetail';
+import Modal from '@/components/molecules/modal/modal';
+import ProjectDetail from '@/components/organisms/projectDetail/projectDetail';
 import { ProjectDetailType } from '@/types/projectType';
 
 export default async function ModalPage({ params }: { params: { id: string } }) {

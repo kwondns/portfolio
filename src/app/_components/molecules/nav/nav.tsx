@@ -2,7 +2,7 @@
 
 import { useSelectedLayoutSegment } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { collapseCss, navCss } from '@/components/molecules/nav.css';
+import { collapseCss, navCss } from '@/components/molecules/nav/nav.css';
 import isMobile from '@/hooks/useDevice';
 import NavButton from '@/components/atoms/navButton/navButton';
 import Container from '@/components/atoms/base/container';

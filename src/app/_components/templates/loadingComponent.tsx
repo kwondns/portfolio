@@ -1,4 +1,4 @@
-import { centerContainerCss } from '@/components/molecules/centerContainer.css';
+import { centerContainerCss } from '@/styles/centerContainer.css';
 import Spinner from '@/components/atoms/spinner/spinner';
 import Container from '@/components/atoms/base/container';
 

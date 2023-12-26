@@ -1,7 +1,7 @@
 import ProjectCardContainer from '@/components/atoms/ProjectCardContainer/projectCardContainer';
 import ProjectCardInnerContainer from '@/components/atoms/projectCardInnerContainer/projectCardInnerContainer';
 import { ProjectType } from '@/types/projectType';
-import ProjectTagContainer from '@/components/molecules/projectTagContainer';
+import ProjectTagContainer from '@/components/molecules/projectTagContainer/projectTagContainer';
 
 type CardProps = Omit<ProjectType, 'content'> & {
   index: number;

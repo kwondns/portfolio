@@ -2,7 +2,7 @@ import Link from 'next/link';
 import ProfileContainer from '@/components/atoms/profileContainer/profileContainer';
 import { introChildCss, introCss, nameCss, pCss } from '@/styles/profile.css';
 import { containerCss } from '@/styles/layout.css';
-import Stepper from '@/components/molecules/stepper';
+import Stepper from '@/components/molecules/stepper/stepper';
 import Container from '@/components/atoms/base/container';
 import IconBase from '@/components/atoms/base/iconBase';
 
