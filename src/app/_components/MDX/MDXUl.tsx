@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import { MDXUlCss } from '@/components/atoms/MDXUl.css';
+import { MDXUlCss } from '@/components/MDX/MDXUl.css';
 
 export default function MDXUl(props: HTMLProps<HTMLUListElement>) {
   const { children } = props;

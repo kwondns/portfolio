@@ -1,5 +1,5 @@
 import { ComponentProps } from 'react';
-import { MDXCodeCss } from '@/components/atoms/MDXCode.css';
+import { MDXCodeCss } from '@/components/MDX/MDXCode.css';
 
 export default function MDXCode(props: ComponentProps<'code'>) {
   const { children } = props;

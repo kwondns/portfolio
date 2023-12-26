@@ -1,4 +1,4 @@
-import { MDXHrCss } from '@/components/atoms/MDXHr.css';
+import { MDXHrCss } from '@/components/MDX/MDXHr.css';
 
 export default function MDXHr() {
   return <hr className={MDXHrCss} />;

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React, { HTMLProps } from 'react';
-import { MDXImageCss } from '@/components/atoms/MDXImage.css';
+import { MDXImageCss } from '@/components/MDX/MDXImage.css';
 
 export default function MDXImage(props: HTMLProps<HTMLImageElement>) {
   const { src, alt } = props;
