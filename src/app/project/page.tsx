@@ -1,5 +1,5 @@
 import { kv } from '@vercel/kv';
-import CardProject from '@/components/organisms/cardProject';
+import ProjectCard from '@/components/organisms/projectCard';
 import { ProjectType } from '@/types/projectType';
 import Container from '@/components/atoms/base/container';
 
@@ -12,7 +12,7 @@ export default async function ProjectPage() {
         if (project !== null) {
           const { id, previewImage, title, shortenContent, date, frontTag, backTag, DBTag } = project;
           return (
-            <CardProject
+            <ProjectCard
               key={title}
               id={id}
               index={index}

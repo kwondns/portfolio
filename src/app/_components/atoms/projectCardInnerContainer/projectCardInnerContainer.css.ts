@@ -2,7 +2,7 @@ import { globalStyle, style } from '@vanilla-extract/css';
 import { themeVars } from '@/styles/theme.css';
 import { vars } from '@/styles/globalTheme.css';
 
-export const cardProjectInnerContainerCss = style({
+export const projectCardInnerContainerCss = style({
   position: 'relative',
   borderRadius: '10px',
   width: '680px',
@@ -30,12 +30,12 @@ export const cardChildCss = style({
   rowGap: '4px',
   height: 'auto',
   selectors: {
-    [`${cardProjectInnerContainerCss}:hover &`]: {
+    [`${projectCardInnerContainerCss}:hover &`]: {
       maxHeight: '100%',
       overflowY: 'auto',
       backgroundColor: '#303030',
     },
-    [`${cardProjectInnerContainerCss} &`]: {
+    [`${projectCardInnerContainerCss} &`]: {
       position: 'absolute',
       bottom: 0,
       left: 0,

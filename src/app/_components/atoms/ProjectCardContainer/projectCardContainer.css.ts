@@ -1,7 +1,7 @@
 import { createVar, style } from '@vanilla-extract/css';
 
 export const cardIndex = createVar();
-export const cardProjectContainerCss = style({
+export const projectCardContainerCss = style({
   opacity: 0,
   display: 'flex',
   justifyContent: 'center',
