@@ -1,5 +1,5 @@
 import React from 'react';
-import SpanBase from '@/components/atoms/spanBase';
+import SpanBase from '@/components/atoms/base/spanBase';
 
 type IconBaseProps = {
   // eslint-disable-next-line react/require-default-props

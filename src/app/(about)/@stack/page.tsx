@@ -3,7 +3,7 @@ import { sectionCss } from '@/styles/stack.css';
 import { StackType } from '@/types/tagType';
 import StackList from '@/components/molecules/stackList';
 import { containerCss } from '@/styles/layout.css';
-import Container from '@/components/atoms/container';
+import Container from '@/components/atoms/base/container';
 
 export default async function StackPage() {
   const frontStack = await kv.hgetall<StackType>('frontStack');

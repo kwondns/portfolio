@@ -1,5 +1,5 @@
 import { keyframes, style } from '@vanilla-extract/css';
-import { cardProjectInnerContainerCss } from '@/components/atoms/cardProjectInnerContainer.css';
+import { cardProjectInnerContainerCss } from '@/components/atoms/cardProjectInnerContainer/cardProjectInnerContainer.css';
 
 const waves = keyframes({
   '100%': {

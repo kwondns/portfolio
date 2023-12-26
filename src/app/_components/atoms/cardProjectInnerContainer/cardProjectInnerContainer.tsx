@@ -6,8 +6,8 @@ import {
   cardChildCss,
   cardProjectInnerContainerCss,
   cardProjectImageCss,
-} from '@/components/atoms/cardProjectInnerContainer.css';
-import Container from '@/components/atoms/container';
+} from '@/components/atoms/cardProjectInnerContainer/cardProjectInnerContainer.css';
+import Container from '@/components/atoms/base/container';
 
 type CardInnerContainerProps = {
   previewImage: string;

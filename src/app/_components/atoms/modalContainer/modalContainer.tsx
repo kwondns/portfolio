@@ -3,9 +3,13 @@
 import React, { MouseEvent, useCallback } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { modalCloseButtonCss, modalContainerCss, modalFullButtonCss } from '@/components/atoms/modalContainer.css';
-import Container from '@/components/atoms/container';
-import IconBase from '@/components/atoms/iconBase';
+import {
+  modalCloseButtonCss,
+  modalContainerCss,
+  modalFullButtonCss,
+} from '@/components/atoms/modalContainer/modalContainer.css';
+import Container from '@/components/atoms/base/container';
+import IconBase from '@/components/atoms/base/iconBase';
 
 export default function ModalContainer({ children }: { children: React.ReactNode }) {
   const route = useRouter();

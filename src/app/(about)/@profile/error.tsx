@@ -1,8 +1,8 @@
 'use client';
 
-import ErrorButton from '@/components/atoms/errorButton';
+import ErrorButton from '@/components/atoms/errorButton/errorButton';
 import { centerContainerCss } from '@/components/molecules/centerContainer.css';
-import Container from '@/components/atoms/container';
+import Container from '@/components/atoms/base/container';
 
 export default function Error({ reset }: { reset: () => void }) {
   return (

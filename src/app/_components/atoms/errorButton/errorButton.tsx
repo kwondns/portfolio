@@ -1,4 +1,4 @@
-import { errorButtonCss } from '@/components/atoms/errorButton.css';
+import { errorButtonCss } from '@/components/atoms/errorButton/errorButton.css';
 
 export default function ErrorButton({ reset }: { reset: () => void }) {
   return (

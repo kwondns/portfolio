@@ -2,8 +2,8 @@
 
 import { useRouter } from 'next/navigation';
 import React, { useCallback, useEffect } from 'react';
-import { modalWrapperCss } from '@/components/atoms/modalWrapper.css';
-import Container from '@/components/atoms/container';
+import { modalWrapperCss } from '@/components/atoms/modalWrapper/modalWrapper.css';
+import Container from '@/components/atoms/base/container';
 
 export default function ModalWrapper({ children }: { children: React.ReactNode }) {
   const route = useRouter();

@@ -2,8 +2,8 @@
 
 import useDevice from '@/hooks/useDevice';
 import { SimpleTagType } from '@/types/tagType';
-import TagContainer from '@/components/atoms/tagContainer';
-import Tag from '@/components/atoms/tag';
+import TagContainer from '@/components/atoms/tagContainer/tagContainer';
+import Tag from '@/components/atoms/tag/tag';
 
 type CardTagContainerProps = { frontTag: SimpleTagType[]; backTag: SimpleTagType[]; DBTag: string };
 export default function ProjectTagContainer(props: CardTagContainerProps) {

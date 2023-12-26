@@ -1,7 +1,7 @@
 import { style } from '@vanilla-extract/css';
 import { themeVars } from '@/styles/theme.css';
 
-export const cardProfileCss = style({
+export const profileContainerCss = style({
   margin: '16px',
   border: '1px solid gray',
   borderRadius: '8px',

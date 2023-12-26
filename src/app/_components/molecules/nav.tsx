@@ -4,9 +4,9 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { collapseCss, navCss } from '@/components/molecules/nav.css';
 import isMobile from '@/hooks/useDevice';
-import NavButton from '@/components/atoms/navButton';
-import Container from '@/components/atoms/container';
-import IconBase from '@/components/atoms/iconBase';
+import NavButton from '@/components/atoms/navButton/navButton';
+import Container from '@/components/atoms/base/container';
+import IconBase from '@/components/atoms/base/iconBase';
 
 type NavContentProps = {
   menu: readonly ['about', 'profile', 'stack', 'project'];

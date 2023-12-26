@@ -1,6 +1,6 @@
 import React, { HTMLProps } from 'react';
 import { MDXTableCss, containerCss } from '@/components/MDX/MDXTable.css';
-import Container from '@/components/atoms/container';
+import Container from '@/components/atoms/base/container';
 
 export default function MDXTable(props: HTMLProps<HTMLTableElement>) {
   const { children } = props;

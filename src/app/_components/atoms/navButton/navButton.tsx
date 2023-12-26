@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { linkButtonBase, linkButtonCss } from '@/components/atoms/navButton.css';
+import { linkButtonBase, linkButtonCss } from '@/components/atoms/navButton/navButton.css';
 
 type NavButtonProps = { value: 'about' | 'profile' | 'stack' | 'project'; isActive: boolean; onClick: () => void };
 export default function NavButton(props: NavButtonProps) {

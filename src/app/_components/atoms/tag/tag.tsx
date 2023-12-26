@@ -1,6 +1,6 @@
 import { TagStackType, TagType } from '@/types/tagType';
-import { spanCss, tagCss } from '@/components/atoms/tag.css';
-import SpanBase from '@/components/atoms/spanBase';
+import { spanCss, tagCss } from '@/components/atoms/tag/tag.css';
+import SpanBase from '@/components/atoms/base/spanBase';
 
 type TagProps = TagType & { type: TagStackType };
 export default function Tag(props: TagProps) {

@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import CardProfile from '@/components/atoms/cardProfile';
+import ProfileContainer from '@/components/atoms/profileContainer/profileContainer';
 import { introChildCss, introCss, nameCss, pCss } from '@/styles/profile.css';
 import { containerCss } from '@/styles/layout.css';
 import Stepper from '@/components/molecules/stepper';
-import Container from '@/components/atoms/container';
-import IconBase from '@/components/atoms/iconBase';
+import Container from '@/components/atoms/base/container';
+import IconBase from '@/components/atoms/base/iconBase';
 
 export default function ProfilePage() {
   const stepperText = [
@@ -18,7 +18,7 @@ export default function ProfilePage() {
   return (
     <Container className={containerCss}>
       <h1 className={nameCss}>Kwon HanJun</h1>
-      <CardProfile>
+      <ProfileContainer>
         <p className={introCss}>
           <IconBase className={introChildCss}>person</IconBase>96. 07. 18
         </p>
@@ -39,11 +39,11 @@ export default function ProfilePage() {
             <IconBase className={introChildCss}>link</IconBase>https://github.com/kwondns
           </Link>
         </p>
-      </CardProfile>
-      <CardProfile>
+      </ProfileContainer>
+      <ProfileContainer>
         <Stepper texts={stepperText} />
-      </CardProfile>
-      <CardProfile>
+      </ProfileContainer>
+      <ProfileContainer>
         <p className={pCss}>
           정보 보안에 관심을 갖고 해당 분야의 공부와 경험을 쌓았다가 개발자로 전향을 하였습니다. 생각지 못했던 오류를
           해결했을 때 오는 성취감이 개발자로 전향하는 큰 계기가 되었습니다. 동아리 내 웹 페이지 제작, 알바 형태로 외국인
@@ -54,7 +54,7 @@ export default function ProfilePage() {
           Front-End뿐 아니라 Back-End 및 인프라까지 관심이 있어 실제 서비스를 하고 있는 홈페이지를 제작 및 배포까지 해본
           경험을 토대로 실무에서도 적용할 수 있는 점이 저의 강점이 되어 주었습니다.
         </p>
-      </CardProfile>
+      </ProfileContainer>
     </Container>
   );
 }

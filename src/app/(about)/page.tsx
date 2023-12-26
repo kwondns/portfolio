@@ -13,8 +13,8 @@ import {
   whiteColorCss,
   yellowColorCss,
 } from '@/styles/app.css';
-import Container from '@/components/atoms/container';
-import SpanBase from '@/components/atoms/spanBase';
+import Container from '@/components/atoms/base/container';
+import SpanBase from '@/components/atoms/base/spanBase';
 
 export default function Page() {
   return (

@@ -7,7 +7,7 @@ import {
   tagListLiCss,
   tagListUlCss,
 } from '@/components/molecules/tagList.css';
-import StackButton from '@/components/atoms/stackButton';
+import StackButton from '@/components/atoms/stackButton/stackButton';
 
 type TagByCategoryType = { [keys: string]: StackButtonType[] };
 

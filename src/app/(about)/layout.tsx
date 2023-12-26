@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '@/components/atoms/container';
+import Container from '@/components/atoms/base/container';
 
 type LayoutProps = {
   children: React.ReactNode;

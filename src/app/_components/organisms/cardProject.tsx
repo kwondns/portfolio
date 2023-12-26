@@ -1,5 +1,5 @@
-import CardProjectContainer from '@/components/atoms/cardProjectContainer';
-import CardProjectInnerContainer from '@/components/atoms/cardProjectInnerContainer';
+import CardProjectContainer from '@/components/atoms/cardProjectContainer/cardProjectContainer';
+import CardProjectInnerContainer from '@/components/atoms/cardProjectInnerContainer/cardProjectInnerContainer';
 import { ProjectType } from '@/types/projectType';
 import ProjectTagContainer from '@/components/molecules/projectTagContainer';
 

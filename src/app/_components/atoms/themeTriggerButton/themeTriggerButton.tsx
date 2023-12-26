@@ -1,6 +1,6 @@
 'use client';
 
-import { themeTriggerButtonCss } from '@/components/atoms/themeTriggerButton.css';
+import { themeTriggerButtonCss } from '@/components/atoms/themeTriggerButton/themeTriggerButton.css';
 import { useThemeContext } from '@/hooks/useTheme';
 
 export default function ThemeTriggerButton() {

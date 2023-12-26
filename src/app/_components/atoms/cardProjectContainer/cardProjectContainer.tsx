@@ -3,7 +3,7 @@
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 import React from 'react';
 import Link from 'next/link';
-import { cardProjectContainerCss, cardIndex } from '@/components/atoms/cardProjectContainer.css';
+import { cardProjectContainerCss, cardIndex } from '@/components/atoms/cardProjectContainer/cardProjectContainer.css';
 
 type CardProps = {
   index: number;
