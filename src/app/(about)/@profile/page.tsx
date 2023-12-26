@@ -4,6 +4,7 @@ import { introChildCss, introCss, nameCss, pCss } from '@/styles/profile.css';
 import { containerCss } from '@/styles/layout.css';
 import Stepper from '@/components/molecules/stepper';
 import Container from '@/components/atoms/container';
+import IconBase from '@/components/atoms/iconBase';
 
 export default function ProfilePage() {
   const stepperText = [
@@ -19,24 +20,23 @@ export default function ProfilePage() {
       <h1 className={nameCss}>Kwon HanJun</h1>
       <CardProfile>
         <p className={introCss}>
-          <span className={`${introChildCss} material-symbols-outlined`}>person</span>96. 07. 18
+          <IconBase className={introChildCss}>person</IconBase>96. 07. 18
         </p>
         <p className={introCss}>
-          <span className={`${introChildCss} material-symbols-outlined`}>school</span>홍익대학교 세종캠퍼스
-          컴퓨터정보통신공학과
+          <IconBase className={introChildCss}>school</IconBase>홍익대학교 세종캠퍼스 컴퓨터정보통신공학과
         </p>
         <p className={introCss}>
-          <span className={`${introChildCss} material-symbols-outlined`}>computer</span>Front-End, Back-End, Full-Stack
+          <IconBase className={introChildCss}>computer</IconBase>Front-End, Back-End, Full-Stack
         </p>
         <p className={introCss}>
-          <span className={`${introChildCss} material-symbols-outlined`}>reorder</span>육군 정보보호병 병장 전역
+          <IconBase className={introChildCss}>reorder</IconBase>육군 정보보호병 병장 전역
         </p>
         <p className={introCss}>
-          <span className={`${introChildCss} material-symbols-outlined`}>mail</span> kwon96718@gmail.com
+          <IconBase className={introChildCss}>mail</IconBase> kwon96718@gmail.com
         </p>
         <p className={introCss}>
           <Link href="https://github.com/kwondns" target="_blink">
-            <span className={`${introChildCss} material-symbols-outlined`}>link</span>https://github.com/kwondns
+            <IconBase className={introChildCss}>link</IconBase>https://github.com/kwondns
           </Link>
         </p>
       </CardProfile>

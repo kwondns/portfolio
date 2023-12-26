@@ -6,6 +6,7 @@ import { collapseCss, navCss } from '@/components/molecules/nav.css';
 import isMobile from '@/hooks/useDevice';
 import NavButton from '@/components/atoms/navButton';
 import Container from '@/components/atoms/container';
+import IconBase from '@/components/atoms/iconBase';
 
 type NavContentProps = {
   menu: readonly ['about', 'profile', 'stack', 'project'];
@@ -95,7 +96,7 @@ export default function Nav() {
   return isMobile() ? (
     <>
       <button type="button" onClick={onClickCollapse}>
-        <span className="material-symbols-outlined">menu</span>
+        <IconBase>menu</IconBase>
       </button>
       <Container className={collapseCss[collapse ? 'active' : 'deactivate']}>
         <NavContent
