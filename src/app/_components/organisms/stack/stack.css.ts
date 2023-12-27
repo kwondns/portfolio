@@ -1,6 +1,5 @@
 import { style, styleVariants } from '@vanilla-extract/css';
 import { vars } from '@/styles/globalTheme.css';
-import { sprinkles } from '@/styles/sprinkles.css';
 
 const articleBase = style({
   flex: 1,
