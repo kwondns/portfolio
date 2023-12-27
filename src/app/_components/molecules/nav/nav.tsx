@@ -8,6 +8,7 @@ import NavButton from '@/components/atoms/navButton/navButton';
 import Container from '@/components/atoms/base/container';
 import IconBase from '@/components/atoms/base/iconBase';
 import ButtonBase from '@/components/atoms/base/buttonBase';
+import { generateObserver } from '@/components/molecules/nav/generateObserver';
 
 type NavContentProps = {
   menu: readonly ['about', 'profile', 'stack', 'project'];
@@ -54,44 +55,8 @@ export default function Nav() {
       { ref: profileElement, action: () => setCurrentLocation('profile') },
       { ref: stackElement, action: () => setCurrentLocation('stack') },
     ];
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const targetElement = elements.find((el) => el.ref === entry.target);
-            if (targetElement) {
-              targetElement.action();
-            }
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.2,
-      },
-    );
 
-    if (aboutElement) {
-      observer.observe(aboutElement);
-    }
-    if (profileElement) {
-      observer.observe(profileElement);
-    }
-    if (stackElement) {
-      observer.observe(stackElement);
-    }
-    return () => {
-      if (aboutElement) {
-        observer.unobserve(aboutElement);
-      }
-      if (profileElement) {
-        observer.unobserve(profileElement);
-      }
-      if (stackElement) {
-        observer.unobserve(stackElement);
-      }
-    };
+    generateObserver(elements);
   }, [currentSegment]);
 
   return isMobile() ? (
