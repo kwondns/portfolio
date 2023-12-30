@@ -26,5 +26,6 @@ export const generateObserver = (elements: ElementsType) => {
       observer.observe(ref);
       return () => observer.unobserve(ref);
     }
+    return null;
   });
 };

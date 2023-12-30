@@ -6,23 +6,27 @@ import Modal from '@/components/molecules/modal/modal';
 
 type ProjectIdTemplateProps = {
   project: ProjectDetailType;
+  // eslint-disable-next-line react/require-default-props
   modal?: boolean;
 };
+
+const ProjectDetailComponent = (props: ProjectDetailType) => {
+  const { title, content, backTag, DBTag, frontTag } = props;
+  return <ProjectDetail title={title} content={content} frontTag={frontTag} backTag={backTag} DBTag={DBTag} />;
+};
+
 export default function ProjectIdTemplate(props: ProjectIdTemplateProps) {
   const { project, modal = false } = props;
   const { title, frontTag, backTag, DBTag, content } = project;
-  const ProjectDetailComponent = () => (
-    <ProjectDetail title={title} content={content} frontTag={frontTag} backTag={backTag} DBTag={DBTag} />
-  );
   if (modal)
     return (
       <Modal>
-        <ProjectDetailComponent />
+        <ProjectDetailComponent title={title} frontTag={frontTag} backTag={backTag} DBTag={DBTag} content={content} />
       </Modal>
     );
   return (
     <Container className={containerCss}>
-      <ProjectDetailComponent />
+      <ProjectDetailComponent title={title} frontTag={frontTag} backTag={backTag} DBTag={DBTag} content={content} />
     </Container>
   );
 }
