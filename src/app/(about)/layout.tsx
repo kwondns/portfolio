@@ -1,4 +1,5 @@
 import React from 'react';
+import Container from '@/components/atoms/base/container';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -8,11 +9,11 @@ type LayoutProps = {
 export default function Layout({ children, profile, stack }: LayoutProps) {
   return (
     <>
-      <div id="about">{children}</div>
-      <div id="profile">{profile}</div>
-      <div id="stack" style={{ height: 'fit-content' }}>
+      <Container id="about">{children}</Container>
+      <Container id="profile">{profile}</Container>
+      <Container id="stack" style={{ height: 'fit-content' }}>
         {stack}
-      </div>
+      </Container>
     </>
   );
 }

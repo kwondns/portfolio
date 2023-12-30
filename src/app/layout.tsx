@@ -4,7 +4,7 @@ import '@/styles/globalStyle.css';
 import '@/styles/globalTheme.css';
 import React from 'react';
 import { ThemeContext } from '@/hooks/useTheme';
-import Header from '@/components/organisms/header';
+import Header from '@/components/organisms/header/header';
 
 export const metadata: Metadata = {
   title: 'Kwon Hanjun',
