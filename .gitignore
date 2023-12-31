@@ -41,3 +41,5 @@ qodana.yaml
 upload
 
 /src/app/testpage/
+
+/src/app/_constants/blur.ts
