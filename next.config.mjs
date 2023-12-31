@@ -1,6 +1,9 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin');
-const withMDX = require('@next/mdx')();
+import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin';
+import withPlaiceholder from '@plaiceholder/next';
+import generated from '@next/mdx';
+
+const withMDX = generated();
 
 const withVanillaExtract = createVanillaExtractPlugin();
 
@@ -14,4 +17,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withMDX(withVanillaExtract(nextConfig));
+export default withPlaiceholder(withMDX(withVanillaExtract(nextConfig)));
