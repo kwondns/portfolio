@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "blur": "node scripts/imageBlurGenerator.mjs",
+    "build": "npm run blur && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -21,9 +22,11 @@
     "autoprefixer": "^10.4.16",
     "next": "^14.0.4",
     "next-mdx-remote": "^4.4.1",
+    "plaiceholder": "^3.0.0",
     "postcss": "^8.4.31",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sharp": "^0.33.1"
   },
   "devDependencies": {
     "@types/node": "^20",
