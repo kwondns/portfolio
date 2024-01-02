@@ -1,5 +1,5 @@
 import { keyframes, style } from '@vanilla-extract/css';
-import { projectCardInnerContainerCss } from '@/components/atoms/projectCardInnerContainer/projectCardInnerContainer.css';
+import { cardInnerContainerCss } from '@/components/atoms/cardInnerContainer/cardInnerContainer.css';
 
 const waves = keyframes({
   '100%': {
@@ -8,7 +8,7 @@ const waves = keyframes({
 });
 
 export const waveSkeletonCss = style([
-  projectCardInnerContainerCss,
+  cardInnerContainerCss,
   {
     background: 'linear-gradient(120deg, #ececec 50%, #fafafa 60%, #fafafa 61%, #ececec 70%)',
     backgroundSize: '200%',
