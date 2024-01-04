@@ -2,7 +2,7 @@ import Image, { ImageProps } from 'next/image';
 import blur from '@/constants/blur';
 
 type ImageBaseProps = Omit<ImageProps, 'src'> & { src: string };
-export default async function Img(props: ImageBaseProps) {
+export default function Img(props: ImageBaseProps) {
   const { src, ...others } = props;
   return (
     <Image
