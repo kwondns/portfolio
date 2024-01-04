@@ -5,8 +5,8 @@ import { vars } from '@/styles/globalTheme.css';
 export const cardInnerContainerCss = style({
   position: 'relative',
   borderRadius: '10px',
-  width: '680px',
-  height: '350px',
+  width: 'max(680px, 90%)',
+  height: 'min(350px, 100%)',
   margin: '1rem',
   overflow: 'hidden',
   cursor: 'pointer',
@@ -17,7 +17,6 @@ export const cardInnerContainerCss = style({
       flex: 1,
       padding: '0.25rem',
       margin: '0.25rem 0.25rem 1rem',
-      height: '280px',
     },
   },
 });
