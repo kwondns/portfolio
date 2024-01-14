@@ -1,9 +1,5 @@
-let requestURL: string;
-if (process.env.PUBLIC_NEXT_VERCEL_URL) requestURL = `https://${process.env.PUBLIC_NEXT_VERCEL_URL}/api/`;
-else requestURL = 'http://localhost:3000/api/';
-
 export default async function fetchAPI<T>(url: string): Promise<T> {
-  const response = await fetch(`${requestURL}${url}`, {
+  const response = await fetch(`${process.env.PUBLIC_NEXT_VERCEL_URL}/api/${url}`, {
     method: 'get',
     next: { revalidate: 3600 },
   });
