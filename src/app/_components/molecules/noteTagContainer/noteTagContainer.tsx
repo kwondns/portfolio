@@ -3,14 +3,14 @@ import TagContainer from '@/components/atoms/tagContainer/tagContainer';
 import Tag from '@/components/atoms/tag/tag';
 
 type NoteTagContainerProps = {
-  tags: TagsType;
+  tags: TagsType[];
 };
 export default function NoteTagContainer(props: NoteTagContainerProps) {
   const { tags } = props;
   return (
     <TagContainer>
       {tags.map((tag) => (
-        <Tag value={tag.name} type="front" />
+        <Tag key={tag.name} value={tag.name} type={tag.color} isNote />
       ))}
     </TagContainer>
   );

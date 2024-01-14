@@ -23,7 +23,7 @@ export const cardInnerContainerCss = style({
 
 export const cardProjectImageCss = style({
   width: '100%',
-  height: 'auto',
+  height: 'max(auto, 300px)',
 });
 export const cardChildCss = style({
   rowGap: '4px',

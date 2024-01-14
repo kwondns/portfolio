@@ -11,8 +11,8 @@ import ButtonBase from '@/components/atoms/base/buttonBase';
 import { generateObserver } from '@/components/molecules/nav/generateObserver';
 
 type NavContentProps = {
-  menu: readonly ['about', 'profile', 'stack', 'project'];
-  isActive: 'about' | 'project';
+  menu: readonly ['about', 'profile', 'stack', 'project', 'note'];
+  isActive: 'about' | 'project' | 'note';
   currentLocation: string;
   onClickCollapse: () => void;
 };
@@ -25,7 +25,9 @@ const NavContent = ({ menu, isActive, currentLocation, onClickCollapse }: NavCon
             key={value}
             value={value}
             isActive={
-              (isActive === value && value === 'project') || (isActive !== 'project' && currentLocation === value)
+              (isActive === value && value === 'project') ||
+              (isActive === value && value === 'note') ||
+              (isActive !== 'project' && isActive !== 'note' && currentLocation === value)
             }
             onClick={onClickCollapse}
           />
@@ -36,9 +38,19 @@ const NavContent = ({ menu, isActive, currentLocation, onClickCollapse }: NavCon
 };
 
 export default function Nav() {
-  const menu = ['about', 'profile', 'stack', 'project'] as const;
+  const menu = ['about', 'profile', 'stack', 'project', 'note'] as const;
   const currentSegment = useSelectedLayoutSegment();
-  const isActive = currentSegment === '(about)' ? 'about' : 'project';
+  let isActive: 'about' | 'note' | 'project' = 'about';
+  switch (currentSegment) {
+    case 'note':
+      isActive = 'note';
+      break;
+    case 'project':
+      isActive = 'project';
+      break;
+    default:
+      break;
+  }
   const [currentLocation, setCurrentLocation] = useState('');
   const [collapse, setCollapse] = useState<boolean>(false);
   const onClickCollapse = () => {
