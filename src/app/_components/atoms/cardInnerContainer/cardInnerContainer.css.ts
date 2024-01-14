@@ -2,11 +2,11 @@ import { globalStyle, style } from '@vanilla-extract/css';
 import { themeVars } from '@/styles/theme.css';
 import { vars } from '@/styles/globalTheme.css';
 
-export const projectCardInnerContainerCss = style({
+export const cardInnerContainerCss = style({
   position: 'relative',
   borderRadius: '10px',
-  width: '680px',
-  height: '350px',
+  width: 'max(680px, 90%)',
+  height: 'min(350px, 100%)',
   margin: '1rem',
   overflow: 'hidden',
   cursor: 'pointer',
@@ -17,25 +17,24 @@ export const projectCardInnerContainerCss = style({
       flex: 1,
       padding: '0.25rem',
       margin: '0.25rem 0.25rem 1rem',
-      height: '280px',
     },
   },
 });
 
 export const cardProjectImageCss = style({
   width: '100%',
-  height: 'auto',
+  height: 'max(auto, 300px)',
 });
 export const cardChildCss = style({
   rowGap: '4px',
   height: 'auto',
   selectors: {
-    [`${projectCardInnerContainerCss}:hover &`]: {
+    [`${cardInnerContainerCss}:hover &`]: {
       maxHeight: '100%',
       overflowY: 'auto',
       backgroundColor: '#303030',
     },
-    [`${projectCardInnerContainerCss} &`]: {
+    [`${cardInnerContainerCss} &`]: {
       position: 'absolute',
       bottom: 0,
       left: 0,

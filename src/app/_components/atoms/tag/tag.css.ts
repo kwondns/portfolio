@@ -1,5 +1,6 @@
-import { style, styleVariants } from '@vanilla-extract/css';
+import { createVar, style, styleVariants } from '@vanilla-extract/css';
 import { vars } from '@/styles/globalTheme.css';
+import { themeVars } from '@/styles/theme.css';
 
 export const tagBase = style({
   borderRadius: '20px',
@@ -27,12 +28,33 @@ export const tagCss = styleVariants(stackType, (stack) => [
   },
 ]);
 
+export const noteTagColor = createVar();
+
+export const noteTagCss = style([
+  tagBase,
+  {
+    // fontSize: '1.2rem',
+    border: `2px solid ${noteTagColor}`,
+    ':hover': {
+      color: themeVars.color,
+    },
+  },
+]);
+
 export const spanCss = style({
-  fontSize: '0.8rem',
+  fontSize: '1rem',
   selectors: {
     [`${tagBase}:hover &`]: {
-      fontSize: '0.9rem',
+      fontSize: '1.1rem',
       transition: 'font-size 0.2s ease',
     },
+  },
+});
+
+export const tagActiveCss = style({
+  backgroundColor: themeVars.color,
+  color: themeVars.background,
+  ':hover': {
+    color: themeVars.background,
   },
 });
