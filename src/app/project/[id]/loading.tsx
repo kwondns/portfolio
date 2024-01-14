@@ -1,5 +1,5 @@
-import LoadingComponent from '@/components/molecules/loadingComponent';
+import LoadingTemplate from '@/components/templates/loading/loadingTemplate';
 
 export default function Loading() {
-  return <LoadingComponent />;
+  return <LoadingTemplate />;
 }
