@@ -1,19 +1,66 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: {
+    browser: true,
+    es2021: true,
+  },
   extends: [
+    'airbnb',
+    'airbnb-typescript',
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:@tanstack/eslint-plugin-query/recommended',
     'plugin:tailwindcss/recommended',
-    'plugin:prettier/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  overrides: [],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh', '@tanstack/query'],
+  parserOptions: {
+    project: './tsconfig.json',
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['react-refresh', 'react', '@typescript-eslint'],
+  settings: {
+    tailwindcss: {
+      config: './tailwind.config.ts',
+    },
+  },
   rules: {
-    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    'no-unused-vars': 'warn',
+    'no-console': 'warn',
+    'import/extensions': 0,
+    // * react
+    'react/jsx-props-no-spreading': [
+      1,
+      {
+        custom: 'ignore',
+      },
+    ],
+    'react/react-in-jsx-scope': 0,
+    'import/prefer-default-export': 1,
+    'import/no-extraneous-dependencies': 0,
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external'],
+        'newlines-between': 'always',
+      },
+    ],
+    'react-refresh/only-export-components': [
+      'warn',
+      {
+        allowConstantExport: true,
+      },
+    ],
+    // * typescript
+    '@typescript-eslint/no-shadow': ['warn'],
+    // * react-query
     '@tanstack/query/exhaustive-deps': 'error',
     '@tanstack/query/no-rest-destructuring': 'warn',
     '@tanstack/query/stable-query-client': 'error',
