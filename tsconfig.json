@@ -11,34 +11,34 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "src",
+    "baseUrl": "./src",
     "paths": {
       "@/atoms": [
-        "components/atoms/index"
+        "components/atoms"
       ],
       "@/molecules": [
-        "components/molecules/index"
+        "components/molecules"
       ],
-      "@/organisms": [
-        "components/organisms/index"
+      "organisms": [
+        "components/organisms"
       ],
       "@/templates": [
-        "components/templates/index"
+        "components/templates"
       ],
       "@/pages": [
-        "components/pages/index"
+        "components/pages"
       ],
       "@/libs": [
-        "libs/index"
+        "libs"
       ],
       "@/styles": [
-        "styles/index"
+        "styles"
       ],
       "@/hooks": [
-        "hooks/index"
+        "hooks"
       ],
       "@/types": [
-        "types/index"
+        "types"
       ],
     },
     /* Linting */
