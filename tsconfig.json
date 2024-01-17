@@ -13,32 +13,32 @@
     "jsx": "react-jsx",
     "baseUrl": "src",
     "paths": {
-      "@/atoms/*": [
-        "components/atoms/*"
+      "@/atoms": [
+        "components/atoms/index"
       ],
-      "@/molecules/*": [
-        "components/molecules/*"
+      "@/molecules": [
+        "components/molecules/index"
       ],
-      "@/organisms/*": [
-        "components/organisms/*"
+      "@/organisms": [
+        "components/organisms/index"
       ],
-      "@/templates/*": [
-        "components/templates/*"
+      "@/templates": [
+        "components/templates/index"
       ],
-      "@/pages/*": [
-        "components/pages/*"
+      "@/pages": [
+        "components/pages/index"
       ],
-      "@/libs/*": [
-        "libs/*"
+      "@/libs": [
+        "libs/index"
       ],
-      "@/styles/*": [
-        "styles/*"
+      "@/styles": [
+        "styles/index"
       ],
-      "@/hooks/*": [
-        "hooks/*"
+      "@/hooks": [
+        "hooks/index"
       ],
-      "@/types/*": [
-        "types/*"
+      "@/types": [
+        "types/index"
       ],
     },
     /* Linting */
