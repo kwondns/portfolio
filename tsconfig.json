@@ -11,35 +11,41 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "src",
+    "baseUrl": "./src",
     "paths": {
-      "@/atoms/*": [
-        "components/atoms/*"
+      "@/atoms": [
+        "components/atoms"
       ],
-      "@/molecules/*": [
-        "components/molecules/*"
+      "@/molecules": [
+        "components/molecules"
       ],
-      "@/organisms/*": [
-        "components/organisms/*"
+      "@/organisms": [
+        "components/organisms"
       ],
-      "@/templates/*": [
-        "components/templates/*"
+      "@/templates": [
+        "components/templates"
       ],
-      "@/pages/*": [
-        "components/pages/*"
+      "@/pages": [
+        "components/pages"
       ],
-      "@/libs/*": [
-        "libs/*"
+      "@/libs": [
+        "libs"
       ],
-      "@/styles/*": [
-        "styles/*"
+      "@/styles": [
+        "styles"
       ],
-      "@/hooks/*": [
-        "hooks/*"
+      "@/stores": [
+        "stores"
       ],
-      "@/types/*": [
-        "types/*"
+      "@/hooks": [
+        "hooks"
       ],
+      "@/types": [
+        "types"
+      ],
+      "@/constants": [
+        "constants"
+      ]
     },
     /* Linting */
     "strict": true,
@@ -51,7 +57,7 @@
     "src",
     ".eslintrc.cjs",
     "vite.config.ts",
-    "tailwind.config.js",
+    "tailwind.config.ts",
     "postcss.config.js"
   ],
   "references": [
