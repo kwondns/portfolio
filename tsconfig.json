@@ -19,7 +19,7 @@
       "@/molecules": [
         "components/molecules"
       ],
-      "organisms": [
+      "@/organisms": [
         "components/organisms"
       ],
       "@/templates": [
@@ -34,12 +34,18 @@
       "@/styles": [
         "styles"
       ],
+      "@/stores": [
+        "stores"
+      ],
       "@/hooks": [
         "hooks"
       ],
       "@/types": [
         "types"
       ],
+      "@/constants": [
+        "constants"
+      ]
     },
     /* Linting */
     "strict": true,
@@ -51,7 +57,7 @@
     "src",
     ".eslintrc.cjs",
     "vite.config.ts",
-    "tailwind.config.js",
+    "tailwind.config.ts",
     "postcss.config.js"
   ],
   "references": [
