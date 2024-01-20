@@ -2,7 +2,8 @@
   "git": {
     "deploymentEnabled": {
       "dev": false,
-      "about": false
+      "about": false,
+      "API-Supabase": false
     }
   }
 }
