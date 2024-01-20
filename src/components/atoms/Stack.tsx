@@ -11,7 +11,10 @@ export default function Stack(props: StackProps) {
       className="flex flex-col justify-between gap-y-2 rounded-2xl border-2 border-stone-600/50 p-2 text-center shadow-button transition-all hover:-translate-y-0.5 hover:translate-x-0.5 hover:shadow-button-hover active:-translate-x-[3px] active:translate-y-[3px] active:shadow-none dark:border-stone-400/25"
       to={url ?? ''}
     >
-      <Img className="m-auto aspect-auto max-h-[100px] w-full max-w-[100px]" src={img} />
+      <Img
+        className="m-auto aspect-auto max-h-[100px] w-full max-w-[100px]"
+        src={`${import.meta.env.VITE_SUPABASE_BUCKET_URL}/${img}`}
+      />
       <Typo className="break-words text-xs sm:text-lg">{name}</Typo>
     </Link>
   );

@@ -8,5 +8,7 @@ export type StackTechType = 'front' | 'back' | 'etc';
 
 export type StackCategoryType = {
   category: string;
-  stacks: StackType[];
+  name: string[];
+  img: string[];
+  url: string[];
 };

@@ -1,39 +1,16 @@
+import { useLoaderData } from 'react-router-dom';
+
 import { StackByTech } from '@/organisms';
+import { stackLoader } from '@/pages';
+import { LoaderType } from '@/types';
 
 export default function StackTemplate() {
-  const APIStack = [
-    { name: 'Rest API', img: '/api.png' },
-    { name: 'GraphQL', url: 'https://graphql.org', img: '/graphql.png' },
-    { name: 'Apollo', url: 'https://www.apollographql.com/docs/', img: '/apollo.png' },
-  ];
-  const FrameworkStack = [
-    { name: 'express.js', url: 'https://expressjs.com', img: '/express.png' },
-    { name: 'mongoose', url: 'https://mongoosejs.com', img: '/mongoose.png' },
-  ];
-
+  const stacks = useLoaderData() as LoaderType.LoaderDataType<typeof stackLoader>;
   return (
     <article id="stack">
-      <StackByTech
-        tech="back"
-        stacksCategory={[
-          { category: 'api', stacks: APIStack },
-          { category: 'framework', stacks: FrameworkStack },
-        ]}
-      />
-      <StackByTech
-        tech="back"
-        stacksCategory={[
-          { category: 'api', stacks: APIStack },
-          { category: 'framework', stacks: FrameworkStack },
-        ]}
-      />
-      <StackByTech
-        tech="back"
-        stacksCategory={[
-          { category: 'api', stacks: APIStack },
-          { category: 'framework', stacks: FrameworkStack },
-        ]}
-      />
+      <StackByTech tech="front" stacksCategory={stacks.front} />
+      <StackByTech tech="back" stacksCategory={stacks.back} />
+      <StackByTech tech="etc" stacksCategory={stacks.etc} />
     </article>
   );
 }

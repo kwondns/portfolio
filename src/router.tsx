@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { Layout, About } from '@/pages';
+import { Layout, About, stackLoader } from '@/pages';
 
 const router = createBrowserRouter([
   {
@@ -9,6 +9,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <About />,
+        loader: stackLoader,
       },
       {
         path: 'project',
