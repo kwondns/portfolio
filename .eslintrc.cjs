@@ -43,6 +43,12 @@ module.exports = {
       },
     ],
     'react/react-in-jsx-scope': 0,
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        "additionalHooks": "useRecoilCallback"
+      }
+    ],
     'import/prefer-default-export': 1,
     'import/no-extraneous-dependencies': 0,
     'import/order': [
