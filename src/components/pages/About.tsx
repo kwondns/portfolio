@@ -1,3 +1,4 @@
+import { LoaderFunction } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
 import { useEffect } from 'react';
 
@@ -5,6 +6,7 @@ import { Main, Profile, Stack } from '@/templates';
 import { Div } from '@/atoms';
 import { NavStore } from '@/stores';
 import { generateObserver } from '@/libs';
+import { stackAPI } from '@/apis';
 
 export default function About() {
   const setLocation = useSetRecoilState(NavStore.LocationAtom);
@@ -29,3 +31,10 @@ export default function About() {
     </Div>
   );
 }
+
+export const stackLoader = (async () => {
+  const front = await stackAPI.getFrontStack();
+  const back = await stackAPI.getBackStack();
+  const etc = await stackAPI.getEtcStack();
+  return { front, back, etc };
+}) satisfies LoaderFunction;

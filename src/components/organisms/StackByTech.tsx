@@ -18,7 +18,13 @@ export default function StackByTech(props: StackByTypeProps) {
     <Div className={`my-6 flex flex-col rounded-3xl border-2 border-slate-500/50  p-4 ${colorByTech[tech]}`}>
       <Typo className="text-2xl">{tech.toUpperCase()}</Typo>
       {stacksCategory.map((value) => (
-        <StackByCategory key={value.category} category={value.category} stacks={value.stacks} />
+        <StackByCategory
+          key={value.category}
+          category={value.category}
+          img={value.img}
+          name={value.name}
+          url={value.url}
+        />
       ))}
     </Div>
   );
