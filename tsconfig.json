@@ -45,6 +45,9 @@
       ],
       "@/constants": [
         "constants"
+      ],
+      "@/apis": [
+        "apis"
       ]
     },
     /* Linting */
