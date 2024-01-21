@@ -1,4 +1,2 @@
-import { LoaderFunction } from 'react-router-dom';
-
-export type LoaderDataType<TLoaderFn extends LoaderFunction> =
-  Awaited<ReturnType<TLoaderFn>> extends Response | infer D ? D : never;
+export type LoaderDataType<TLoaderFn extends (...args: any) => any> =
+  Awaited<ReturnType<ReturnType<TLoaderFn>>> extends Response | infer D ? D : never;

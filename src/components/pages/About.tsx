@@ -1,12 +1,13 @@
-import { LoaderFunction } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
 import { useEffect } from 'react';
+import { QueryClient } from '@tanstack/react-query';
 
 import { Main, Profile, Stack } from '@/templates';
 import { Div } from '@/atoms';
 import { NavStore } from '@/stores';
 import { generateObserver } from '@/libs';
-import { stackAPI } from '@/apis';
+import { useStack } from '@/hooks';
+import { StackType } from '@/types';
 
 export default function About() {
   const setLocation = useSetRecoilState(NavStore.LocationAtom);
@@ -32,9 +33,7 @@ export default function About() {
   );
 }
 
-export const stackLoader = (async () => {
-  const front = await stackAPI.getFrontStack();
-  const back = await stackAPI.getBackStack();
-  const etc = await stackAPI.getEtcStack();
-  return { front, back, etc };
-}) satisfies LoaderFunction;
+export const stackLoader = (queryClient: QueryClient) => async () => {
+  const query = useStack();
+  return queryClient.getQueryData<StackType.StackLoaderType>(query.queryKey) ?? (await queryClient.fetchQuery(query));
+};
