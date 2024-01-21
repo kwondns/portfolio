@@ -23,3 +23,8 @@ export async function getEtcStack() {
   }
   return data;
 }
+
+export default async function getStack() {
+  const [front, back, etc] = await Promise.all([getFrontStack(), getBackStack(), getEtcStack()]);
+  return { front, back, etc };
+}

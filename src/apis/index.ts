@@ -1,3 +1,1 @@
-import * as stackAPI from './apiStacks';
-
-export { stackAPI };
+export { default as getStack } from './apiStacks';
