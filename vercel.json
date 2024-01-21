@@ -3,7 +3,8 @@
     "deploymentEnabled": {
       "dev": false,
       "about": false,
-      "API-Supabase": false
+      "API-Supabase": false,
+      "React-Query": false
     }
   }
 }
