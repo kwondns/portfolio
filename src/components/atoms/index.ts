@@ -11,3 +11,4 @@ export { default as Stack } from './Stack';
 export { default as NavButton } from './NavButton';
 export { default as ThemeButton } from './ThemeButton';
 export { default as TopButton } from './TopButton';
+export { default as Spinner } from './Spinner';

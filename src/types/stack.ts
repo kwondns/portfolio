@@ -12,3 +12,9 @@ export type StackCategoryType = {
   img: string[];
   url: string[];
 };
+
+export type StackLoaderType = {
+  front: StackCategoryType[];
+  back: StackCategoryType[];
+  etc: StackCategoryType[];
+};
