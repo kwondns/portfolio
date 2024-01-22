@@ -1,9 +1,9 @@
-import { getStack } from '@/apis';
+import { getStacks } from '@/apis';
 
 export default function useStack() {
   return {
     queryKey: ['stack'],
-    queryFn: getStack,
+    queryFn: getStacks,
     suspense: true,
   };
 }

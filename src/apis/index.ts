@@ -1,1 +1,1 @@
-export { default as getStack } from './apiStacks';
+export { default as getStacks } from './apiStacks';
