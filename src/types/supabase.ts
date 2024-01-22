@@ -141,6 +141,13 @@ export interface Database {
             referencedRelation: 'project';
             referencedColumns: ['id'];
           },
+          {
+            foreignKeyName: 'project_back_tag_project_id_fkey';
+            columns: ['project_id'];
+            isOneToOne: false;
+            referencedRelation: 'project_tag';
+            referencedColumns: ['id'];
+          },
         ];
       };
       project_detail: {
@@ -167,6 +174,13 @@ export interface Database {
             referencedRelation: 'project';
             referencedColumns: ['id'];
           },
+          {
+            foreignKeyName: 'project_detail_id_fkey';
+            columns: ['id'];
+            isOneToOne: true;
+            referencedRelation: 'project_tag';
+            referencedColumns: ['id'];
+          },
         ];
       };
       project_front_tag: {
@@ -191,6 +205,13 @@ export interface Database {
             columns: ['project_id'];
             isOneToOne: false;
             referencedRelation: 'project';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'project_front_tag_project_id_fkey';
+            columns: ['project_id'];
+            isOneToOne: false;
+            referencedRelation: 'project_tag';
             referencedColumns: ['id'];
           },
         ];
@@ -221,6 +242,21 @@ export interface Database {
           img: string[];
           name: string[];
           url: string[];
+        };
+        Relationships: [];
+      };
+      project_tag: {
+        Row: {
+          back_tag: string[];
+          created_at: string;
+          date: string;
+          db: string;
+          front_tag: string[];
+          id: string;
+          preview_image: string;
+          shorten_content: string;
+          title: string;
+          visible: boolean;
         };
         Relationships: [];
       };
