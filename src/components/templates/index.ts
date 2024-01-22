@@ -1,4 +1,5 @@
-export { default as Header } from './HeaderTemplate';
-export { default as Main } from './AboutTemplate';
-export { default as Profile } from './ProfileTemplate';
-export { default as Stack } from './StackTemplate';
+export { default as HeaderTemplate } from './HeaderTemplate';
+export { default as AboutTemplate } from './AboutTemplate';
+export { default as ProfileTemplate } from './ProfileTemplate';
+export { default as StackTemplate } from './StackTemplate';
+export { default as ProjectTemplate } from './ProjectTemplate';
