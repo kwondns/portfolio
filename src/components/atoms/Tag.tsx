@@ -13,7 +13,7 @@ type TagProps = {
 };
 
 const tagBase =
-  'text-center rounded-2xl border px-2 py-1 border-stone-600 dark:border-stone-300 transition dark:hover:text-white';
+  'text-center rounded-2xl border px-2 py-1 border-stone-600 dark:border-stone-300 transition hover:text-white dark:hover:text-white';
 const colors = Object.keys(Color).map((color) => ({ [color]: `${tagBase} text-${color}-400 hover:bg-${color}-500` }));
 const style = Object.assign(
   {
