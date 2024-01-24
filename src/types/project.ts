@@ -8,3 +8,8 @@ export type ProjectType = {
   back_tag: string[];
   db: string;
 };
+
+export type ProjectDetailType = {
+  id: string;
+  content: string;
+};

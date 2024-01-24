@@ -10,8 +10,11 @@ export function useProjectAll() {
 
 export function useProjectId(id: string) {
   return {
-    queryKey: ['project', id],
-    queryFn: getProjects.getProjectAll,
+    queryKey: ['project', 'detail', id],
+    queryFn: async () => {
+      const project = await getProjects.getProjectById(id);
+      return project;
+    },
     suspense: true,
   };
 }

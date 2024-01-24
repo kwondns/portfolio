@@ -9,3 +9,11 @@ export async function getProjectAll() {
   }
   return data;
 }
+
+export async function getProjectById(id: string) {
+  const { data, error } = await Supabase.from('project_detail').select('id, content').eq('id', id);
+  if (error) {
+    throw new Error('Project Not Found');
+  }
+  return data;
+}
