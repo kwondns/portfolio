@@ -8,6 +8,6 @@ export default function code(props: any) {
   return match ? (
     <SyntaxHighlight {...others} PreTag="div" language={match[1]} style={dark} />
   ) : (
-    <code className="m-1 rounded-3xl bg-red-400/60 p-1 text-sm" {...others} />
+    <code className="m-1 rounded-3xl bg-red-400/60 px-2 py-1 text-sm" {...others} />
   );
 }
