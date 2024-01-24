@@ -16,7 +16,7 @@ export default function Layout() {
   const location = useLocation();
   const setNav = useSetRecoilState(NavStore.NavSelector);
   useEffect(() => {
-    setNav(location.pathname.replace('/', ''));
+    setNav(location.pathname.split('/')[1]);
   }, [location]);
 
   return (
