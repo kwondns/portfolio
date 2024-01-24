@@ -28,6 +28,9 @@
       "@/pages": [
         "components/pages"
       ],
+      "@/md": [
+        "components/md"
+      ],
       "@/libs": [
         "libs"
       ],

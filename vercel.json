@@ -4,7 +4,8 @@
       "dev": false,
       "about": false,
       "API-Supabase": false,
-      "React-Query": false
+      "React-Query": false,
+      "Project": false
     }
   }
 }

@@ -2,7 +2,7 @@ import { useSetRecoilState } from 'recoil';
 import { useEffect } from 'react';
 import { QueryClient } from '@tanstack/react-query';
 
-import { Main, Profile, Stack } from '@/templates';
+import { AboutTemplate, ProfileTemplate, StackTemplate } from '@/templates';
 import { Div } from '@/atoms';
 import { NavStore } from '@/stores';
 import { generateObserver } from '@/libs';
@@ -26,9 +26,9 @@ export default function About() {
   }, []);
   return (
     <Div className="grid grid-rows-[0.5fr_1fr_1fr]">
-      <Main />
-      <Profile />
-      <Stack />
+      <AboutTemplate />
+      <ProfileTemplate />
+      <StackTemplate />
     </Div>
   );
 }
