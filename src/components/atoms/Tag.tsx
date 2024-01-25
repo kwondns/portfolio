@@ -27,7 +27,7 @@ const style = Object.assign(
 );
 export default function Tag(props: TagProps) {
   const { color, value, isActive = false } = props;
-  return <Typo className={`${style[color]}} ${isActive && style[`${color}-active`]}`}>{value}</Typo>;
+  return <Typo className={`${style[color]} ${isActive && style[`${color}-active`]}`}>{value}</Typo>;
 }
 
 Tag.defaultProps = {
