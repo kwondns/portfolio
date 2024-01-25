@@ -9,12 +9,12 @@ export default function ProjectTags(props: ProjectTagsProps) {
   const { frontTag, backTag, db } = props;
   return (
     <>
-      <Container type="projectTag">
+      <Container type="tag">
         {frontTag.map((front) => (
           <Tag key={front} color="front" value={front} />
         ))}
       </Container>
-      <Container type="projectTag">
+      <Container type="tag">
         {backTag.map((back) => (
           <Tag key={back} color="back" value={back} />
         ))}
