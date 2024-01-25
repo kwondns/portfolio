@@ -15,7 +15,7 @@ export default function ProjectDetail() {
 
 export const projectDetailLoader =
   (queryClient: QueryClient) =>
-  async ({ params }: LoaderFunctionArgs<ProjectDetailLoaderType>) => {
+  async ({ params }: LoaderFunctionArgs<ProjectDetailLoaderType>): Promise<ProjectType.ProjectDetailType[]> => {
     const { projectId } = params;
     const query = useProject.useProjectId(projectId ?? '');
     return (
