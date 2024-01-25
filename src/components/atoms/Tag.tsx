@@ -1,11 +1,12 @@
 import Color from 'tailwindcss/colors';
 import { DefaultColors } from 'tailwindcss/types/generated/colors';
+import { ComponentProps } from 'react';
 
 import { Typo } from '@/atoms';
 
 type DefaultType = 'front' | 'back' | 'etc';
 
-type TagProps = {
+type TagProps = ComponentProps<'span'> & {
   color: keyof DefaultColors | DefaultType;
   value: string;
   isActive?: boolean;
@@ -26,8 +27,12 @@ const style = Object.assign(
   ...colors,
 );
 export default function Tag(props: TagProps) {
-  const { color, value, isActive = false } = props;
-  return <Typo className={`${style[color]} ${isActive && style[`${color}-active`]}`}>{value}</Typo>;
+  const { className = '', color, value, isActive = false, ...others } = props;
+  return (
+    <Typo className={`${style[color]} ${isActive && style[`${color}-active`]} ${className}`} {...others}>
+      {value}
+    </Typo>
+  );
 }
 
 Tag.defaultProps = {
