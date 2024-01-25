@@ -51,6 +51,7 @@ export default {
     {
       pattern:
         /(text|bg)-(inherit|current|transparent|black|white|slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose|lightBlue|warmGray|trueGray|coolGray|blueGray)-(400|500|600)/,
+      variants: ['lg', 'hover', 'focus', 'lg:hover'],
     },
   ],
 };
