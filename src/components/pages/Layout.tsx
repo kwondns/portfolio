@@ -22,7 +22,7 @@ export default function Layout() {
   return (
     <Div className="grid max-h-full grid-cols-[5%_1fr_5%] grid-rows-[auto_1fr] md:grid-cols-[10%_1fr_10%]">
       <HeaderTemplate />
-      <main className="col-start-2  row-start-2 max-w-full overflow-y-scroll scroll-smooth" ref={mainRef}>
+      <main className="col-start-2 row-start-2 max-w-full overflow-y-scroll scroll-smooth" ref={mainRef}>
         <Outlet />
       </main>
       <TopButton onClickTopButton={onClickTopButton} />
