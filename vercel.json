@@ -2,7 +2,11 @@
   "git": {
     "deploymentEnabled": {
       "dev": false,
-      "note": false
+      "about": false,
+      "API-Supabase": false,
+      "React-Query": false,
+      "Project": false,
+      "Note-v2": false
     }
   }
 }

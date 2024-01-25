@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    scroll-behavior: smooth;
+    overflow: visible;
+    height: var(--vh);
+}
+#root{
+    height: var(--vh);
+
+}
+body{
+    height: var(--vh);
+}

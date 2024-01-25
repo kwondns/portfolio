@@ -1,54 +1,74 @@
 {
   "compilerOptions": {
-    "target": "es2021",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
     "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
+    /* Bundler mode */
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "baseUrl": "src/app",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
     "paths": {
-      "@/components/*": [
-        "_components/*"
+      "@/atoms": [
+        "components/atoms"
       ],
-      "@/styles/*": [
-        "_styles/*"
+      "@/molecules": [
+        "components/molecules"
       ],
-      "@/hooks/*": [
-        "_hooks/*"
+      "@/organisms": [
+        "components/organisms"
       ],
-      "@/types/*": [
-        "_types/*"
+      "@/templates": [
+        "components/templates"
       ],
-      "@/constants/*": [
-        "_constants/*"
+      "@/pages": [
+        "components/pages"
+      ],
+      "@/md": [
+        "components/md"
+      ],
+      "@/libs": [
+        "libs"
+      ],
+      "@/styles": [
+        "styles"
+      ],
+      "@/stores": [
+        "stores"
+      ],
+      "@/hooks": [
+        "hooks"
+      ],
+      "@/types": [
+        "types"
+      ],
+      "@/constants": [
+        "constants"
+      ],
+      "@/apis": [
+        "apis"
       ]
-    }
+    },
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "src/app/_types/mdx.d.ts"
+    "src",
+    ".eslintrc.cjs",
+    "vite.config.ts",
+    "tailwind.config.ts",
+    "postcss.config.js"
   ],
-  "exclude": [
-    "node_modules"
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
   ]
 }
