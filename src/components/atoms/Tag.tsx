@@ -8,13 +8,15 @@ type DefaultType = 'front' | 'back' | 'etc';
 type TagProps = {
   color: keyof DefaultColors | DefaultType;
   value: string;
-  isNote?: boolean;
   isActive?: boolean;
 };
 
 const tagBase =
   'text-center rounded-2xl border px-2 py-1 border-stone-600 dark:border-stone-300 transition hover:text-white dark:hover:text-white';
-const colors = Object.keys(Color).map((color) => ({ [color]: `${tagBase} text-${color}-400 hover:bg-${color}-500` }));
+const colors = Object.keys(Color).map((color) => ({
+  [color]: `${tagBase} text-${color}-600 dark:text-${color}-400 active:bg-${color}-500 hover:bg-${color}-500`,
+  [`${color}-active`]: `bg-${color}-500 text-white dark:text-white`,
+}));
 const style = Object.assign(
   {
     front: `${tagBase} text-red-600 dark:text-red-400 hover:bg-red-500 `,
@@ -24,11 +26,10 @@ const style = Object.assign(
   ...colors,
 );
 export default function Tag(props: TagProps) {
-  const { color, value } = props;
-  return <Typo className={style[color]}>{value}</Typo>;
+  const { color, value, isActive = false } = props;
+  return <Typo className={`${style[color]}} ${isActive && style[`${color}-active`]}`}>{value}</Typo>;
 }
 
 Tag.defaultProps = {
-  isNote: false,
   isActive: false,
 };
