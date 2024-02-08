@@ -12,7 +12,7 @@ export default function Stack(props: StackProps) {
       to={url ?? ''}
     >
       <Img
-        className="m-auto aspect-auto max-h-[100px] w-full max-w-[100px]"
+        className="m-auto aspect-auto max-h-[80px] min-h-[80px] w-full min-w-[80px] max-w-[80px] object-contain"
         src={`${import.meta.env.VITE_SUPABASE_BUCKET_URL}/${img}`}
       />
       <Typo className="break-words text-xs sm:text-lg">{name}</Typo>

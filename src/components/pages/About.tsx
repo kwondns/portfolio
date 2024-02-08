@@ -25,7 +25,7 @@ export default function About() {
     generateObserver(elements);
   }, []);
   return (
-    <Div className="grid grid-rows-[0.5fr_1fr_1fr]">
+    <Div className="flex flex-col">
       <AboutTemplate />
       <ProfileTemplate />
       <StackTemplate />
