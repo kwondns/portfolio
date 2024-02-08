@@ -6,7 +6,7 @@ import { Profile, ProfileSVG } from '@/constants';
 export default function ProfileInfo() {
   const { ProfileText } = Profile;
   return (
-    <Container className="mr-auto animate-[fadeInLeft_0.5s_ease_forwards]" type="profile">
+    <Container className="card mr-auto" type="profile">
       {ProfileText.map((text, index) => (
         <ProfileTypo key={text} icon={ProfileSVG[index]}>
           {text}

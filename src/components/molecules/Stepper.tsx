@@ -6,10 +6,7 @@ const StepperTextBaseStyle = 'col-start-1 col-end-2 row-start-1 row-end-2 text-r
 export default function Stepper() {
   const { StepperText } = Profile;
   return (
-    <Container
-      className="ml-auto flex animate-[fadeInRight_ease_0.5s_0.3s_forwards] flex-col gap-y-2 border-0 md:gap-y-4"
-      type="profile"
-    >
+    <Container className="card ml-auto flex flex-col gap-y-2 border-0 md:gap-y-4" type="profile">
       {StepperText.map((text, index) => {
         if (index === StepperText.length - 1)
           return (
