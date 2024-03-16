@@ -1,11 +1,11 @@
-import Markdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import rehypeRaw from 'rehype-raw';
+import MarkdownPreview from '@uiw/react-markdown-preview';
+import { Plugin } from 'unified';
+import { visit } from 'unist-util-visit';
+import { Element } from 'hast';
 
 import {
   a,
   blockquote,
-  code,
   details,
   GridCol2Container,
   GridCol3Container,
@@ -26,16 +26,26 @@ import {
 } from '@/md';
 
 type MarkdownTemplateProps = {
-  children: string;
+  source: string;
 };
+
+const imgLazyLoading: Plugin = () => (tree) => {
+  visit(tree, 'element', (node: Element) => {
+    if (node.tagName === 'img' && node.properties) {
+      // eslint-disable-next-line no-param-reassign
+      node.properties.loading = 'lazy';
+    }
+  });
+};
+
 export default function MarkdownTemplate(props: MarkdownTemplateProps) {
-  const { children } = props;
+  const { source } = props;
   return (
-    <Markdown
+    <MarkdownPreview
+      source={source}
       components={{
         a,
         blockquote,
-        code,
         h1,
         h2,
         h3,
@@ -54,11 +64,16 @@ export default function MarkdownTemplate(props: MarkdownTemplateProps) {
         gridcol2container: GridCol2Container,
         gridcol3container: GridCol3Container,
       }}
-      remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeRaw]}
-      className="mt-4"
-    >
-      {children}
-    </Markdown>
+      className="my-4 bg-inherit text-inherit"
+      rehypeRewrite={(node, _, parent) => {
+        if ('tagName' in node && node.tagName && parent && 'tagName' in parent && parent.tagName) {
+          if (node.tagName === 'a' && /^h([1-6])/.test(parent.tagName)) {
+            // eslint-disable-next-line no-param-reassign
+            parent.children = parent.children.slice(1);
+          }
+        }
+      }}
+      rehypePlugins={[imgLazyLoading]}
+    />
   );
 }

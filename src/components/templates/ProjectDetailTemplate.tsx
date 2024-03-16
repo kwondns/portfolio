@@ -21,14 +21,14 @@ export default function ProjectDetailTemplate() {
 
   if (currentData === undefined || data === undefined) return <span>데이터가 없습니다.</span>;
   const { title, front_tag: frontTag, back_tag: backTag, db, date } = currentData[0];
-  const { content } = data[0];
+  const { projectDetail } = data;
 
   return (
     <Div className="flex flex-col">
       <Typo className="text-3xl">{title}</Typo>
       <Typo className="text-right text-sm md:text-lg">{date}</Typo>
       <ProjectTags frontTag={frontTag} backTag={backTag} db={db} />
-      <MarkdownTemplate>{content}</MarkdownTemplate>
+      <MarkdownTemplate source={projectDetail} />
     </Div>
   );
 }

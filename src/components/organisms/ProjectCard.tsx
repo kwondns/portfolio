@@ -23,15 +23,15 @@ export default function ProjectCard(props: ProjectCardProps) {
   return (
     <Link
       to={id}
-      className="project-card group sticky top-[100px] mb-4 mt-10 grid max-h-[60%] min-h-[500px] w-full gap-x-8 gap-y-4 overflow-hidden rounded-2xl border-2 border-stone-500 bg-inherit bg-neutral-300 p-8 brightness-100 dark:bg-[#1d1d26] md:grid-cols-[70%_auto] md:grid-rows-[80%_auto]"
+      className="project-card group sticky top-[100px] mb-4 mt-10 grid max-h-[60%] min-h-[500px] w-full gap-x-8 gap-y-4 overflow-hidden rounded-2xl border-2 border-stone-500 bg-neutral-300 p-8 brightness-100 dark:bg-[#1d1d26] md:grid-cols-[70%_auto] md:grid-rows-[80%_auto]"
       key={project.id}
     >
       {isLoading ? (
         <Spinner />
       ) : (
         <Img
-          className="h-auto content-center justify-center rounded-lg object-cover md:w-full"
-          src={`${import.meta.env.VITE_SUPABASE_BUCKET_URL}/${previewImage}`}
+          className="h-auto content-center justify-center rounded-lg object-contain md:max-h-[600px] md:w-full md:max-w-[800px]"
+          src={`${import.meta.env.VITE_IMAGE_URL}/${previewImage}`}
         />
       )}
       <div className="flex flex-col md:row-start-2">
