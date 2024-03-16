@@ -11,5 +11,5 @@ export type ProjectType = {
 
 export type ProjectDetailType = {
   id: string;
-  content: string;
+  projectDetail: string;
 };

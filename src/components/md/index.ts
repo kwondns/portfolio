@@ -7,7 +7,6 @@ export { default as li } from './li';
 export { default as img } from './img';
 export { default as blockquote } from './blockquote';
 export { default as a } from './a';
-export { default as code } from './code';
 export { default as hr } from './hr';
 export { default as RowContainer } from './RowContainer';
 export { default as table } from './table';
