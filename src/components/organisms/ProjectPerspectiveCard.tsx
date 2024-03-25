@@ -8,7 +8,7 @@ type ProjectCardProps = {
   project: ProjectType.ProjectType;
   isLoading: boolean;
 };
-export default function ProjectCard(props: ProjectCardProps) {
+export default function ProjectPerspectiveCard(props: Readonly<ProjectCardProps>) {
   const { project, isLoading } = props;
   const {
     id,

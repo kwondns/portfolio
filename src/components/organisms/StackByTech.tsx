@@ -29,7 +29,7 @@ export default function StackByTech(props: StackByTypeProps) {
       <Div
         className={`my-6 flex flex-1 flex-col rounded-3xl border-2 border-slate-500/50 p-2 md:p-4 ${colorByTech[tech]}`}
       >
-        {data[tech].map((value) => (
+        {data.recent[tech].map((value) => (
           <StackByCategory
             key={value.category}
             category={value.category}

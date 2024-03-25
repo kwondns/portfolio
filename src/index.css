@@ -6,6 +6,7 @@
     scroll-behavior: smooth;
     overflow: visible;
     height: var(--vh);
+    font-family: Kanit, "Noto Sans KR", "Raleway", serif ;
 }
 #root{
     height: var(--vh);

@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Kanit: ['Kanit'],
+        Kanit: ['Kanit', 'Noto Sans KR'],
+        Raleway: ['Raleway', 'Noto Sans KR'],
       },
       keyframes: {
         fadeInUp: {

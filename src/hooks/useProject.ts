@@ -12,7 +12,7 @@ export function useProjectAll() {
 export function useProjectId(id: string) {
   return {
     queryKey: ['project', 'detail', id],
-    queryFn: async () => Fetch<ProjectType.ProjectDetailType>(`port/project/${id}`),
+    queryFn: async () => Fetch<ProjectType.ProjectDetailType>(`port/project/more/${id}`),
     suspense: true,
   };
 }

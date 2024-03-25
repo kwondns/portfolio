@@ -3,7 +3,7 @@ import { useRecoilValue } from 'recoil';
 import { NavButton } from '@/atoms';
 import { NavStore } from '@/stores';
 
-const MenuList = ['about', 'profile', 'stack', 'project', 'note'] as const;
+const MenuList = ['about', 'profile', 'stack', 'project'] as const;
 export default function Menu() {
   const isActive = useRecoilValue(NavStore.NavLocationSelector);
   return (

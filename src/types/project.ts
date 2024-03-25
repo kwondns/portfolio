@@ -9,7 +9,11 @@ export type ProjectType = {
   db: string;
 };
 
-export type ProjectDetailType = {
+export type ProjectDetailType = ProjectType & {
   id: string;
-  projectDetail: string;
+  role: string;
+  context: string;
+  images: string[];
+  link: string;
+  projectMoreDetail: string;
 };
