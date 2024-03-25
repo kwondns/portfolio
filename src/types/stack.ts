@@ -13,8 +13,11 @@ export type StackCategoryType = {
   url: string[];
 };
 
+type StacksType = {
+  [keys in StackTechType]: StackCategoryType[];
+};
+
 export type StackLoaderType = {
-  front: StackCategoryType[];
-  back: StackCategoryType[];
-  etc: StackCategoryType[];
+  recent: StacksType;
+  other: StackType[];
 };

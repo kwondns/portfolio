@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { QueryClient } from '@tanstack/react-query';
 
 import { AboutTemplate, ProfileTemplate, StackTemplate } from '@/templates';
-import { Div } from '@/atoms';
+import { Div, Link } from '@/atoms';
 import { NavStore } from '@/stores';
 import { generateObserver } from '@/libs';
 import { useStack } from '@/hooks';
@@ -29,6 +29,9 @@ export default function About() {
       <AboutTemplate />
       <ProfileTemplate />
       <StackTemplate />
+      <Link to="/project" className="my-20 self-center text-2xl font-bold">
+        To My Project
+      </Link>
     </Div>
   );
 }
