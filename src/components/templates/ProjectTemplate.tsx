@@ -7,13 +7,14 @@ import { useRef } from 'react';
 import { LoaderType } from '@/types';
 import { projectLoader } from '@/pages';
 import { useProject } from '@/hooks';
-import { Typo } from '@/atoms';
-import { ProjectCard } from '@/organisms';
+import { Div, Typo } from '@/atoms';
+import { ProjectRecentCard, ProjectPerspectiveCard } from '@/organisms';
 
 export default function ProjectTemplate() {
   const initialData = useLoaderData() as LoaderType.LoaderDataType<typeof projectLoader>;
   const { data, isLoading } = useQuery({ ...useProject.useProjectAll(), initialData });
   const sectionDiv = useRef<HTMLDivElement | null>(null);
+  const [first, second, third, fourth, fifth, ...rest] = data;
   useGSAP(
     () => {
       gsap.utils.toArray<Element>('.project-card').forEach((element) => {
@@ -37,10 +38,21 @@ export default function ProjectTemplate() {
   );
   if (data === undefined) return <Typo>오류가 발생했습니다.</Typo>;
   return (
-    <section className="perspective-[1000px] flex flex-col items-center pb-80" ref={sectionDiv}>
-      {data.map((project) => (
-        <ProjectCard key={project.id} project={project} isLoading={isLoading} />
-      ))}
-    </section>
+    <Div className="mx-[10%] flex flex-col gap-y-10">
+      <ProjectRecentCard project={first} />
+      <Div className="grid grid-cols-2 gap-x-8">
+        <ProjectRecentCard project={second} />
+        <ProjectRecentCard project={third} />
+      </Div>
+      <Div className="grid grid-cols-2 gap-x-8">
+        <ProjectRecentCard project={fourth} />
+        <ProjectRecentCard project={fifth} />
+      </Div>
+      <section className="perspective-[1000px] flex flex-col items-center pb-80" ref={sectionDiv}>
+        {rest.map((project) => (
+          <ProjectPerspectiveCard key={project.id} project={project} isLoading={isLoading} />
+        ))}
+      </section>
+    </Div>
   );
 }
