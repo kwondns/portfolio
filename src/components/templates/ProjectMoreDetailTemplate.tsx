@@ -1,10 +1,10 @@
-import { useNavigate, useLoaderData, useParams, Link } from 'react-router-dom';
+import { useNavigate, useLoaderData, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 
 import { LoaderType } from '@/types';
 import { projectDetailLoader } from '@/pages';
 import { useProject } from '@/hooks';
-import { Div, Typo } from '@/atoms';
+import { Div, Typo, Link } from '@/atoms';
 import { ProjectTags } from '@/molecules';
 import { MarkdownTemplate } from '@/templates';
 
@@ -25,10 +25,7 @@ export default function ProjectDetailTemplate() {
 
   return (
     <Div className="flex flex-col">
-      <Link
-        className="relative mb-4 flex items-center self-start after:absolute after:inset-x-0 after:-bottom-2 after:h-1 after:origin-bottom after:scale-0 after:bg-stone-700/50 after:transition-all after:content-[''] hover:after:scale-100 hover:after:bg-stone-700 dark:text-stone-300/80 dark:after:bg-stone-300/50 dark:hover:text-stone-300 dark:hover:after:bg-stone-300"
-        to={`/project/${projectId}`}
-      >
+      <Link className="mb-8 self-start" to={`/project/${projectId}`}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"

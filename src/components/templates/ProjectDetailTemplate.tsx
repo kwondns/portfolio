@@ -1,10 +1,10 @@
-import { useNavigate, useLoaderData, useParams, Link } from 'react-router-dom';
+import { useNavigate, useLoaderData, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 
 import { LoaderType } from '@/types';
 import { projectDetailLoader } from '@/pages';
 import { useProject } from '@/hooks';
-import { Div, Img, Typo } from '@/atoms';
+import { Div, Img, Link, Typo } from '@/atoms';
 
 export default function ProjectDetailTemplate() {
   const initialData = useLoaderData() as LoaderType.LoaderDataType<typeof projectDetailLoader>;
@@ -33,10 +33,7 @@ export default function ProjectDetailTemplate() {
         className="absolute left-[50%] right-0 -z-10 max-w-[45vw] -skew-x-6 -skew-y-2 object-contain opacity-30"
         src={`${import.meta.env.VITE_IMAGE_URL}/${previewImage}`}
       />
-      <Link
-        className="relative flex items-center after:absolute after:inset-x-0 after:-bottom-2 after:h-1 after:origin-bottom after:scale-0 after:bg-stone-700/50 after:transition-all after:content-[''] hover:after:scale-100 hover:after:bg-stone-700 dark:text-stone-300/80 dark:after:bg-stone-300/50 dark:hover:text-stone-300 dark:hover:after:bg-stone-300"
-        to="/project"
-      >
+      <Link to="/project">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -88,10 +85,7 @@ export default function ProjectDetailTemplate() {
           </Div>
         </Div>
       )}
-      <Link
-        className="relative mb-20 flex items-center self-end after:absolute after:inset-x-0 after:-bottom-2 after:h-1 after:origin-bottom after:scale-0 after:bg-stone-700/50 after:transition-all after:content-[''] hover:after:scale-100 hover:after:bg-stone-700 dark:text-stone-300/80 dark:after:bg-stone-300/50 dark:hover:text-stone-300 dark:hover:after:bg-stone-300"
-        to={`/project/more/${id}`}
-      >
+      <Link className="mb-20 self-end" to={`/project/more/${id}`}>
         개발 과정 &nbsp;
         <svg
           xmlns="http://www.w3.org/2000/svg"
