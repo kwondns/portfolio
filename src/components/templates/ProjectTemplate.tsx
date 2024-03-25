@@ -2,7 +2,7 @@ import { useLoaderData } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { LoaderType } from '@/types';
 import { projectLoader } from '@/pages';
@@ -15,6 +15,9 @@ export default function ProjectTemplate() {
   const { data, isLoading } = useQuery({ ...useProject.useProjectAll(), initialData });
   const sectionDiv = useRef<HTMLDivElement | null>(null);
   const [first, second, third, fourth, fifth, ...rest] = data;
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   useGSAP(
     () => {
       gsap.utils.toArray<Element>('.project-card').forEach((element) => {
