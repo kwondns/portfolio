@@ -1,10 +1,10 @@
 import { Fetch } from '@/libs';
-import { StackLoaderType } from '../types/stack';
+import { StackType } from '@/types';
 
 export default function useStack() {
   return {
     queryKey: ['stack'],
-    queryFn: async () => Fetch<StackLoaderType>('port/stack'),
+    queryFn: async () => Fetch<StackType.StackLoaderType>('port/stack'),
     suspense: true,
   };
 }
