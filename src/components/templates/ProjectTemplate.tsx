@@ -15,6 +15,7 @@ export default function ProjectTemplate() {
   const { data, isLoading } = useQuery({ ...useProject.useProjectAll(), initialData });
   const sectionDiv = useRef<HTMLDivElement | null>(null);
   const [first, second, third, fourth, fifth, ...rest] = data;
+
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -47,15 +48,17 @@ export default function ProjectTemplate() {
         <ProjectRecentCard project={second} />
         <ProjectRecentCard project={third} />
       </Div>
-      <Div className="grid grid-cols-2 gap-x-8">
-        <ProjectRecentCard project={fourth} />
-        <ProjectRecentCard project={fifth} />
+      <Div className="grid grid-cols-2 gap-x-8 pb-12">
+        {fourth && <ProjectRecentCard project={fourth} />}
+        {fifth && <ProjectRecentCard project={fifth} />}
       </Div>
-      <section className="perspective-[1000px] flex flex-col items-center pb-80" ref={sectionDiv}>
-        {rest.map((project) => (
-          <ProjectPerspectiveCard key={project.id} project={project} isLoading={isLoading} />
-        ))}
-      </section>
+      {rest.length > 0 && (
+        <section className="perspective-[1000px] flex flex-col items-center pb-80" ref={sectionDiv}>
+          {rest.map((project) => (
+            <ProjectPerspectiveCard key={project.id} project={project} isLoading={isLoading} />
+          ))}
+        </section>
+      )}
     </Div>
   );
 }
