@@ -30,7 +30,7 @@ export default function ProjectDetailTemplate() {
   return (
     <Div className="relative flex flex-col items-start gap-y-10 text-stone-700 dark:text-stone-300 md:mx-32">
       <Img
-        className="absolute left-[50%] right-0 -z-10 max-w-[45vw] -skew-x-6 -skew-y-2 object-contain opacity-30"
+        className="absolute left-[50%] right-0 -z-10 max-h-dvh max-w-[45vw] -skew-x-6 -skew-y-2 object-contain opacity-30"
         src={`${import.meta.env.VITE_IMAGE_URL}/${previewImage}`}
       />
       <Link to="/project">
@@ -65,11 +65,11 @@ export default function ProjectDetailTemplate() {
       </Div>
       <Div className="flex max-w-[60%] flex-col gap-y-1">
         <Typo className="text-2xl text-stone-700/70 dark:text-stone-300/70">요약</Typo>
-        <Typo>{context}</Typo>
+        <Typo className="whitespace-pre">{context}</Typo>
       </Div>
       <Div className="flex max-w-[60%] flex-col gap-y-1">
         <Typo className="text-2xl text-stone-700/70 dark:text-stone-300/70">역할</Typo>
-        <Typo>{role}</Typo>
+        <Typo className="whitespace-pre">{role}</Typo>
       </Div>
       {images.length > 0 && (
         <Div className="w-full gap-y-1">
@@ -78,7 +78,7 @@ export default function ProjectDetailTemplate() {
             {images.map((image) => (
               <Img
                 key={image}
-                className="size-auto max-h-[400px] transition hover:scale-90"
+                className="size-auto max-h-[400px] scale-90 transition hover:scale-100"
                 src={`${import.meta.env.VITE_IMAGE_URL}/${image}`}
               />
             ))}
