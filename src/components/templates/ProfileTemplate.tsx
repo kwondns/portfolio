@@ -12,7 +12,7 @@ export default function ProfileTemplate() {
       gsap.utils.toArray<Element>('.card').forEach((element) => {
         gsap
           .timeline({
-            scrollTrigger: { trigger: element, start: '100% 100%', end: '100% 100%', scrub: true },
+            scrollTrigger: { trigger: element, start: 'top bottom-=20%', end: '100% 100%', scrub: true },
           })
           .fromTo(element, { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 3 }, 0);
       });
