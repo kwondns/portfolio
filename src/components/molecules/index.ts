@@ -5,5 +5,3 @@ export { default as StackByCategory } from './StackByCategory';
 export { default as Menu } from './Menu';
 export { default as ProjectCardInfo } from './ProjectCardInfo';
 export { default as ProjectTags } from './ProjectTags';
-export { default as NoteCardInfo } from './NoteCardInfo';
-export { default as NoteFilter } from './NoteFilter';

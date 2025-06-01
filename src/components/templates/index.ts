@@ -6,4 +6,3 @@ export { default as ProjectTemplate } from './ProjectTemplate';
 export { default as ProjectDetailTemplate } from './ProjectDetailTemplate';
 export { default as ProjectMoreDetailTemplate } from './ProjectMoreDetailTemplate';
 export { default as MarkdownTemplate } from './MarkdownTemplate';
-export { default as NoteTemplate } from './NoteTemplate';

@@ -11,8 +11,6 @@ import {
   ProjectDetail,
   ProjectMoreDetail,
   projectDetailLoader,
-  Note,
-  noteLoader,
 } from '@/pages';
 
 const queryClient = new QueryClient({
@@ -39,7 +37,6 @@ const router = createBrowserRouter([
       },
       { path: 'project/:projectId', element: <ProjectDetail />, loader: projectDetailLoader(queryClient) },
       { path: 'project/more/:projectId', element: <ProjectMoreDetail />, loader: projectDetailLoader(queryClient) },
-      { path: 'note', element: <Note />, loader: noteLoader(queryClient) },
     ],
   },
 ]);
