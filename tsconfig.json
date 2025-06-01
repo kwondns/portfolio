@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2021",
     "useDefineForClassFields": true,
     "lib": [
-      "ES2020",
+      "ES2021",
       "DOM",
       "DOM.Iterable"
     ],
@@ -66,6 +66,7 @@
   "include": [
     "src",
     ".eslintrc.cjs",
+    "vite.config.ts",
     "tailwind.config.ts",
     "postcss.config.js"
   ],
