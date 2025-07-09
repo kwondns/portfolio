@@ -1,12 +1,11 @@
+import Hero from '@/components/Hero';
+import About from '@/components/About';
 
 export default function Home() {
   return (
-    <main >
-      <div >
-        <p className="!bg-amber-800 text-4xl">
-          Get started by editing&nbsp;
-        </p>
-      </div>
+    <main>
+      <Hero />
+      <About />
     </main>
-  )
+  );
 }
