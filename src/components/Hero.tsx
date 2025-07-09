@@ -3,7 +3,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-here">
-        <div className="absolute inset-0  opacity-10"></div>
+        <div className="absolute inset-0 opacity-10"></div>
       </div>
       <div className="relative z-10 w-full max-w-container-lg mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-8">
@@ -13,7 +13,7 @@ export default function Hero() {
             </span>
             <span className="block text-xl sm:text-2xl lg:text-3xl font-normal text-text-secondary">Kwon HanJun</span>
           </h1>
-          <div className="flex items-center justify-center space-x-1">
+          <div className="relative flex items-center justify-center space-x-1 before:content-[''] before:absolute before:bottom-0 before:min-w-[230px] before:h-0.5 before:bg-primary">
             <TypingRole />
           </div>
           <p className="max-w-3xl mx-auto text-base sm:text-lg text-text-secondary leading-relaxed">
