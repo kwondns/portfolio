@@ -29,7 +29,7 @@ export default function Hero() {
               GitHub
             </a>
             <a
-              href="mailto:kwon96718@gmail.com"
+              href="mailto:kwondns@gmail.com"
               className="inline-flex items-center justify-center px-6 py-3 bg-transparent border border-border text-text rounded-lg font-medium transition-all duration-300 hover:bg-secondary focus:outline-none focus:ring-4 focus:ring-primary/40"
             >
               연락하기
