@@ -40,5 +40,5 @@ const largeStyle = `${beforeHorizontalLine}
 `;
 export default function Timeline(props: TimelineProps) {
   const { children } = props;
-  return <div className={`grid relative mt-4 ${smallStyle} ${mediumStyle} ${largeStyle}`}>{children}</div>;
+  return <div className={`grid relative my-12 ${smallStyle} ${mediumStyle} ${largeStyle}`}>{children}</div>;
 }
