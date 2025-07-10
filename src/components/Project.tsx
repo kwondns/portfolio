@@ -6,7 +6,10 @@ import ProjectCard from '@/components/ProjectCard';
 export default async function Project() {
   const data = await get<ProjectType[]>('/port/project');
   return (
-    <section id="project" className="my-24 mx-12">
+    <section id="project" className="mx-12">
+      <div className="flex justify-center mb-8">
+        <h2 className="text-4xl font-bold gradient-title">Project</h2>
+      </div>
       <BentoGrid className="gap-8 grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))]">
         {data.map((project) => (
           <ProjectCard key={project.id} {...project} />

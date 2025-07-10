@@ -2,6 +2,7 @@ import Typography from '@/components/Typography';
 import TimelineContent from '@/components/TimelineContent';
 import Timeline from '@/components/Timeline';
 import TIMELINE from '@/constants/timeline';
+import Stack from '@/components/Stack';
 
 export default function About() {
   return (
@@ -9,7 +10,7 @@ export default function About() {
       <div className="flex justify-center">
         <h2 className="mx-auto text-4xl font-bold gradient-title">자기소개</h2>
       </div>
-      <div className="max-w-10/12 mx-auto mt-8 text-center break-keep whitespace-break-spaces">
+      <div className="max-w-10/12 mx-auto mt-8 mb-32 text-center break-keep whitespace-break-spaces">
         <Typography color="info">
           안녕하세요! 저는 권한준입니다.
           <br />
@@ -27,6 +28,7 @@ export default function About() {
           <TimelineContent key={content} year={year} content={content} company={company} role={role} />
         ))}
       </Timeline>
+      <Stack />
     </section>
   );
 }
