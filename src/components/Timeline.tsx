@@ -19,6 +19,7 @@ const mediumStyle = `${beforeVerticalLineMedium}
   md:max-xl:[&>*]:w-1/2
   md:max-xl:[&>*:nth-child(odd)]:pr-4
   md:max-xl:[&>*:nth-child(even)]:pl-4
+  md:max-xl:[&>*:nth-child(even)>*]:items-end
   md:max-xl:[&>*:nth-child(odd)>.timeline-marker]:-right-2
   md:max-xl:[&>*:nth-child(even)>.timeline-marker]:-left-2
 `;
