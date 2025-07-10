@@ -1,5 +1,15 @@
 import { FaAws, FaNodeJs } from 'react-icons/fa6';
-import { SiTerraform, SiReact, SiDocker, SiPostgresql, SiNestjs, SiTypescript, SiTypeorm } from 'react-icons/si';
+import {
+  SiTerraform,
+  SiReact,
+  SiDocker,
+  SiPostgresql,
+  SiNestjs,
+  SiTypescript,
+  SiTypeorm,
+  SiGithub,
+  SiGmail,
+} from 'react-icons/si';
 import { RiNextjsFill } from 'react-icons/ri';
 
 export const Icons = {
@@ -14,6 +24,8 @@ export const Icons = {
   nodejs: FaNodeJs,
   typescript: SiTypescript,
   typeorm: SiTypeorm,
+  github: SiGithub,
+  mail: SiGmail,
 } as const;
 
 export type IconKey = keyof typeof Icons;
