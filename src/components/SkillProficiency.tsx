@@ -20,7 +20,12 @@ export default function SkillProficiency(props: SkillProficiencyProps) {
   }, [isShown]);
   return (
     <div className="bg-secondary-active w-full h-2 rounded-full" ref={elementRef}>
-      <div className="bg-timeline-marker h-2 z-100 rounded-full transition-all" style={{ width: `${percent}%` }} />
+      <div
+        className="bg-timeline-marker h-2 z-100 rounded-full transition-all"
+        role="progressbar"
+        aria-valuenow={value as number}
+        style={{ width: `${percent}%` }}
+      />
     </div>
   );
 }
