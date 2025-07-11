@@ -6,7 +6,7 @@ import Stack from '@/components/Stack';
 
 export default function About() {
   return (
-    <section className="text-text mx-12 my-24 text-xl">
+    <section id="about" className="text-text mx-12 mt-24 text-xl">
       <div className="flex justify-center">
         <h2 className="mx-auto text-4xl font-bold gradient-title">자기소개</h2>
       </div>

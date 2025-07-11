@@ -4,7 +4,7 @@ import BackToTopButtonClient from '@/components/BackToTopButtonClient';
 
 export default function Contact() {
   return (
-    <div className="text-center bg-secondary p-4">
+    <div id="contact" className="text-center bg-secondary p-4">
       <h2 className="text-4xl font-bold mb-8 gradient-title">Contact</h2>
       <p className="text-info mb-8">새로운 기회에 대해 이야기하고 싶으시다면 언제든 연락주세요.</p>
 
