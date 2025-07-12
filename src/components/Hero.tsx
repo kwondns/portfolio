@@ -16,7 +16,7 @@ export default function Hero() {
           <div className="relative flex items-center justify-center space-x-1 before:content-[''] before:absolute before:bottom-0 before:min-w-[230px] before:h-0.5 before:bg-primary">
             <TypingRole />
           </div>
-          <p className="max-w-3xl mx-auto text-base sm:text-lg text-text-secondary leading-relaxed">
+          <p className="max-w-4xl mx-auto text-base sm:text-lg text-text-secondary leading-relaxed">
             웹과 인프라를 아우르는 풀스택 개발자로, 사용자 중심의 웹 애플리케이션을 구축하고 AWS 기반 클라우드 인프라를
             설계합니다.
           </p>
