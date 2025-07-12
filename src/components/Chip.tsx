@@ -4,7 +4,7 @@ type ChipProps = {
 export default function Chip(props: ChipProps) {
   const { children } = props;
   return (
-    <div className="rounded-full whitespace-nowrap bg-primary-active px-3 py-1 text-sm text-background font-medium">
+    <div className="rounded-full whitespace-nowrap bg-primary-active/70 px-3 py-1 text-sm text-text font-medium">
       {children}
     </div>
   );
