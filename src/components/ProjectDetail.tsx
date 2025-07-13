@@ -70,7 +70,7 @@ export default async function ProjectModal(props: ProjectModalType) {
             <Chips tags={back_tag} />
           </BentoCard>
           <Link
-            className="flex items-center-safe text-lg gap-2 bg-secondary-active self-center focus:ring-4 focus:ring-primary rounded-xl hover:ring-primary-hover hover:ring-4 transition-all focus:outline-none text-text p-4"
+            className="flex items-center-safe sm:text-lg gap-2 bg-secondary-active self-center focus:ring-4 focus:ring-primary rounded-xl hover:ring-primary-hover hover:ring-4 transition-all focus:outline-none text-text p-4"
             href={link}
           >
             프로젝트 방문하기
