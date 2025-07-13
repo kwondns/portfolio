@@ -1,6 +1,6 @@
 import { RefObject, useEffect, useState } from 'react';
 
-export function useObserver(element: RefObject<HTMLDivElement> | null) {
+export function useObserver(element: RefObject<HTMLDivElement> | null, threshold = 0.1) {
   const [isShow, setIsShow] = useState(false);
   useEffect(() => {
     if (!element?.current) return;
@@ -15,7 +15,7 @@ export function useObserver(element: RefObject<HTMLDivElement> | null) {
       {
         root: null,
         rootMargin: '0px',
-        threshold: 0.1,
+        threshold,
       },
     );
     observer.observe(element.current);
