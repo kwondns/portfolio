@@ -13,3 +13,8 @@ export type ProjectType = {
   link: string;
   projectMoreDetail: string;
 };
+
+export type ProjectModalType = ProjectType & {
+  modal_role: string;
+  modal_content: string;
+};

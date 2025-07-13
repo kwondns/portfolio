@@ -10,7 +10,7 @@ import {
   SiGithub,
   SiGmail,
 } from 'react-icons/si';
-import { RiNextjsFill } from 'react-icons/ri';
+import { RiNextjsFill, RiExternalLinkLine, RiCloseLine } from 'react-icons/ri';
 
 export const Icons = {
   aws: FaAws,
@@ -26,6 +26,8 @@ export const Icons = {
   typeorm: SiTypeorm,
   github: SiGithub,
   mail: SiGmail,
+  externalLink: RiExternalLinkLine,
+  close: RiCloseLine,
 } as const;
 
 export type IconKey = keyof typeof Icons;
