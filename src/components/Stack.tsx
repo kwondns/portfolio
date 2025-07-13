@@ -21,7 +21,7 @@ const SkillWithPercentage = ({ icon, skill, percentage }: { icon: IconKey; skill
 
 export default function Stack() {
   return (
-    <div className="my-24 sm:mx-12">
+    <div className="my-24">
       <BentoGrid>
         {Object.entries(STACK).map(([key, value]) => (
           <BentoCard key={key}>

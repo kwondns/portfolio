@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ProjectType } from '@/types/project';
 import Typography from '@/components/Typography';
 import Chips from '@/components/Chips';
+import DynamicIcon from '@/components/DynamicIcon';
 
 export default function ProjectCard(props: ProjectType) {
   const { id, shorten_content, date, db, front_tag, back_tag, role, context, title, link } = props;
@@ -32,10 +33,11 @@ export default function ProjectCard(props: ProjectType) {
       </Link>
       <div className="pt-4">
         <Link
+          className="flex justify-self-start items-center-safe sm:text-lg gap-2 bg-secondary-active self-center focus:ring-2 focus:ring-primary rounded-xl hover:ring-primary-hover hover:ring-2 transition-all focus:outline-none text-text py-2 px-4"
           href={link}
-          className="bg-transparent border-[0.5px] border-card-border-inner text-text py-1.5 px-4 rounded-lg hover:bg-text hover:text-background"
         >
-          바로가기
+          <Typography color="text">바로가기</Typography>
+          <DynamicIcon name="externalLink" />
         </Link>
       </div>
     </BentoCard>
