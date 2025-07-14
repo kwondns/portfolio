@@ -10,8 +10,8 @@ export default function ProjectCard(props: ProjectType) {
   const shownFrontEnd = front_tag.slice(0, 2);
   const shownBackend = back_tag.slice(0, 2);
   return (
-    <BentoCard className="justify-between">
-      <Link href={`/project/${id}`} scroll={false}>
+    <BentoCard className="!p-0 justify-between relative after:content-['🔍'] after:absolute after:top-4 after:right-4 after:-z-20 after:opacity-0 hover:after:opacity-90 after:transition-opacity">
+      <Link href={`/project/${id}`} scroll={false} className="p-4">
         <div>
           <Typography color="text" type="title">
             {title}
@@ -31,7 +31,7 @@ export default function ProjectCard(props: ProjectType) {
           <Chips tags={[...shownFrontEnd, ...shownBackend, db]} />
         </div>
       </Link>
-      <div className="pt-4">
+      <div className="p-4">
         <Link
           className="flex justify-self-start items-center-safe sm:text-lg gap-2 bg-secondary-active self-center focus:ring-2 focus:ring-primary rounded-xl hover:ring-primary-hover hover:ring-2 transition-all focus:outline-none text-text py-2 px-4"
           href={link}
