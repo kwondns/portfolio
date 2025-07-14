@@ -1,1 +1,80 @@
 @import 'tailwindcss';
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+@theme {
+    --color-background: rgba(31, 33, 33, 1);
+    --color-surface: rgba(38, 40, 40, 1);
+    --color-text: rgba(245, 245, 245, 1);
+    --color-text-secondary: rgba(167, 169, 169, 0.7);
+    --color-primary: rgba(50, 184, 198, 1);
+    --color-primary-hover: rgba(45, 166, 178, 1);
+    --color-primary-active: rgba(41, 150, 161, 1);
+    --color-secondary: rgba(119, 124, 124, 0.15);
+    --color-secondary-hover: rgba(119, 124, 124, 0.25);
+    --color-secondary-active: rgba(119, 124, 124, 0.3);
+    --color-border: rgba(119, 124, 124, 0.3);
+    --color-third: rgba(139, 92, 246, 1);
+    --color-error: rgba(255, 84, 89, 1);
+    --color-success: rgba(50, 184, 198, 1);
+    --color-warning: rgba(230, 129, 97, 1);
+    --color-info: rgba(167, 169, 169, 1);
+    --color-focus-ring: rgba(50, 184, 198, 0.4);
+    --color-btn-primary-text: rgba(19, 52, 59, 1);
+    --color-card-border: rgba(119, 124, 124, 0.15);
+    --color-card-border-inner: rgba(119, 124, 124, 0.15);
+
+    --animate-blink: blink 1s infinite;
+}
+
+@layer base {
+    .modal-container::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .modal-container::-webkit-scrollbar-track:vertical, .modal-container::-webkit-scrollbar-corner:vertical {
+        background: var(--color-secondary);
+        border-radius: 4px;
+    }
+
+    .modal-container::-webkit-scrollbar-thumb:vertical {
+        background: var(--color-primary);
+        border-radius: 4px;
+    }
+
+    .modal-container::-webkit-scrollbar-thumb:hover:vertical {
+        background: var(--color-primary-hover);
+    }
+}
+
+@layer components {
+    .bg-here {
+        background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.2), transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.15), transparent 60%),
+        linear-gradient(135deg, rgba(31, 33, 33, 0.8), rgba(17, 24, 39, 0.9));
+    }
+
+    .bg-timeline-marker {
+        background: linear-gradient(135deg, var(--color-primary), var(--color-third));
+    }
+
+    .gradient-title {
+        background: linear-gradient(135deg, var(--color-primary), var(--color-third));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block
+    }
+}
+
+:root {
+    scroll-behavior: smooth;
+    transition: font-size 0.2s ease;
+}
+
