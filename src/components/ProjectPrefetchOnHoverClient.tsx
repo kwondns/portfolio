@@ -2,7 +2,7 @@
 
 import { useOnMouseWithDelay } from '@/hooks/useOnMouseWithDelay';
 import { useRouter } from 'next/navigation';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 type ProjectPrefetchOnHoverClientProps = {
   projectId: string;
@@ -14,12 +14,13 @@ export default function ProjectPrefetchOnHoverClient(props: ProjectPrefetchOnHov
   const router = useRouter();
   const prefetchWithData = async () => {
     if (!called.current) {
-      router.prefetch(`/project/${projectId}`);
       await fetch(`/api/project/${projectId}`);
       called.current = true;
     }
   };
   const { onMouseEnter, onMouseLeave } = useOnMouseWithDelay(prefetchWithData);
+
+  useEffect(() => router.prefetch(`/project/${projectId}`), []);
 
   return (
     <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
