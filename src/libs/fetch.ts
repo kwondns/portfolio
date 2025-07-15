@@ -10,5 +10,5 @@ export const getProjectWithCache = (projectId: string) =>
   unstable_cache<() => Promise<ProjectModalType>>(
     async () => await get(`/port/project/${projectId}`),
     ['project', projectId],
-    { tags: ['project', projectId], revalidate: 3600 },
+    { tags: [`project-${projectId}`], revalidate: 3600 },
   )();

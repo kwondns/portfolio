@@ -1,7 +1,8 @@
 import { getProjectWithCache } from '@/libs/fetch';
 import ProjectDetail from '@/components/ProjectDetail';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'auto';
+export const revalidate = 3600;
 
 interface Props {
   params: Promise<{ projectId: string }>;
