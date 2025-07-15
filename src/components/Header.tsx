@@ -48,7 +48,7 @@ export default function Header() {
     // Project Detail 페이지에선 항상 열리도록 추가
     if (childrenSegments[0] !== 'project') window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [childrenSegments]);
   // 모달이 열리면 무조건 숨김
   useEffect(() => {
     if (modalSegments.length > 1) {

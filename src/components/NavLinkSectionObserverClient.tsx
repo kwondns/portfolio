@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useEffect } from 'react';
+import { useSelectedLayoutSegments } from 'next/navigation';
 
 export default function NavLinkSectionObserverClient({
   section,
@@ -11,6 +12,7 @@ export default function NavLinkSectionObserverClient({
   isActive: boolean;
   action: (section: string) => void;
 }) {
+  const childrenSegments = useSelectedLayoutSegments('children');
   useEffect(() => {
     const id = section.toLowerCase();
     const sectionElement = document.getElementById(id);
@@ -29,7 +31,7 @@ export default function NavLinkSectionObserverClient({
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [childrenSegments]);
   return (
     <Link
       href={`/#${section.toLowerCase()}`}
