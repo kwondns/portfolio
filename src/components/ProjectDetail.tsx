@@ -41,7 +41,7 @@ export default async function ProjectModal(props: ProjectModalType) {
           {shorten_content}
         </Typography>
         <div className="flex flex-col gap-4 mt-4">
-          <BentoGrid>
+          <BentoGrid className="grid-cols-[repeat(auto-fit,_minmax(280px,_1fr))]">
             <FlexBentoCard title="날짜" content={date} />
             <FlexBentoCard title="역할" content={modal_role} />
             <FlexBentoCard title="DB" content={db} />
