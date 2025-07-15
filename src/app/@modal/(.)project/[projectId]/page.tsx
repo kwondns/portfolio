@@ -1,5 +1,4 @@
-import { get } from '@/libs/fetch';
-import { ProjectModalType } from '@/types/project';
+import { getProjectWithCache } from '@/libs/fetch';
 import ProjectDetail from '@/components/ProjectDetail';
 
 export const dynamic = 'force-dynamic';
@@ -10,6 +9,6 @@ interface Props {
 
 export default async function ProjectModal({ params }: Props) {
   const { projectId } = await params;
-  const project = await get<ProjectModalType>(`/port/project/${projectId}`);
+  const project = await getProjectWithCache(projectId);
   return <ProjectDetail {...project} />;
 }
